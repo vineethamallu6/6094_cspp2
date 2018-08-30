@@ -39,7 +39,7 @@ public final class  Solution{
 		{
 			for (l=0;l<q;l++)
 			{
-				System.out.print(sum[i][l]);
+				System.out.print(sum[i][l]+" ");
 			}
 			System.out.println(" ");
 		}
