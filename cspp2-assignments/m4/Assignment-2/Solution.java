@@ -37,11 +37,11 @@ public final class  Solution{
 		}
 		 for (i=0;i<m;i++)
 		{
-			for (l=0;l<q;l++)
+			for (l=0;l<q-1;l++)
 			{
 				System.out.print(sum[i][l]+" ");
 			}
-			System.out.println(" ");
+			System.out.println(sum[i][q-1]);
 		}
 	}
 }
