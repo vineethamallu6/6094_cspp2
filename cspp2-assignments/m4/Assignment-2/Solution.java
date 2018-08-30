@@ -6,8 +6,7 @@ public final class  Solution{
 		m=s.nextInt();
 		n=s.nextInt();
 		
-
-		int arr1[][]=new int[m][n];
+			int arr1[][]=new int[m][n];
 		
 		for (i=0;i<m;i++)
 		{
@@ -28,6 +27,9 @@ public final class  Solution{
 				arr2[k][l]=s.nextInt();
 			}
 		}
+		if (m==p&&n==q){
+
+
 		for (i=0;i<m;i++)
 		{
 			for (l=0;l<q;l++)
@@ -44,4 +46,11 @@ public final class  Solution{
 			System.out.println(sum[i][q-1]);
 		}
 	}
+	else
+	{
+		System.out.println("not possible");
+	}
 }
+}
+		
+
