@@ -3,7 +3,7 @@
 import java.util.Scanner;
 /**main class.
 */
-public class Solution {
+public final class Solution {
 /**Fill.
     */
     private Solution() {
@@ -17,7 +17,7 @@ public class Solution {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         int arr[] = new int[n];
-        for (int i = 0;i < n;i++) {
+        for (int i = 0; i < n; i++) {
             arr[i] = sc.nextInt();
         }
         int max = arr[0];
