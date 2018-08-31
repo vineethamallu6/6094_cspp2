@@ -46,8 +46,7 @@ public final class  Solution {
             }
             System.out.println(sum[i][q - 1]);
         }
-    }
-    else {
+    } else {
         System.out.println("not possible");
     }
 }
