@@ -23,7 +23,7 @@ public final class Solution {
 		int n = sc.nextInt();
 		for(int i = 0; i < n; i++) {
 			String s = sc.next();
-			String res = binaryToDecimal(s);//Write binaryToDecimal function
+			String res = binaryToDecimal(s);
 			System.out.println(res);
 		}
 	}
@@ -31,12 +31,12 @@ public final class Solution {
 	*@param str String.
     */
 	public static String binaryToDecimal(final String str) {
-		 int decimal = 0,i = 0;
+		 int decimal = 0, i = 0;
 		 long n = Long.parseLong(str);
-		 while(n != 0) {
+		 while (n != 0) {
 		 	decimal += ((n % N_U_M) * Math.pow(2, i));
 		 	n = n / N_U_M;
-		 	i ++;
+		 	i++;
 		 }
 		 String s1 = decimal + "";
 		 return s1;
