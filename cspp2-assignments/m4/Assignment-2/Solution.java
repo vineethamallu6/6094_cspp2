@@ -5,9 +5,7 @@ public final class  Solution{
 		Scanner s = new Scanner(System.in);
 		m = s.nextInt();
 		n = s.nextInt();
-		
-			int[][] arr1 = new int[m][n];
-		
+		int[][] arr1 = new int[m][n];
 		for (i = 0; i < m; i++) {
 			for (j = 0; j < n; j++) {
 				arr1[i][j] = s.nextInt();
