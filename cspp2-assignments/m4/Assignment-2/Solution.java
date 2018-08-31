@@ -20,7 +20,7 @@ public final class  Solution{
 
 		for (k = 0; k < p; k++) {
 			for (l = 0; l < q; l++) {
-				arr2[k][l]=s.nextInt();
+				arr2[k][l] = s.nextInt();
 			}
 		}
 		if (m == p && n == q) {
