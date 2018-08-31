@@ -26,8 +26,8 @@ public final class  Solution {
 		}
 		p = s.nextInt();
 		q = s.nextInt();
-		int arr2[][] = new int[p][q];
-		int sum[][] = new int[m][q];
+		int[][] arr2 = new int[p][q];
+		int[][] sum = new int[m][q];
 
 		for (k = 0; k < p; k++) {
 			for (l = 0; l < q; l++) {
