@@ -1,7 +1,7 @@
 /**binary string.
 */
 import java.util.Scanner;
-/**import
+/**import.
 */
 public final class Solution {
 /**
@@ -21,7 +21,7 @@ public final class Solution {
 	public static void main(final String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();
-		for(int i = 0; i < n; i++) {
+		for (int i = 0; i < n; i++) {
 			String s = sc.next();
 			String res = binaryToDecimal(s);
 			System.out.println(res);
