@@ -11,7 +11,7 @@ public class Solution
 		for(int i=0;i<n;i++) {
 			String s=sc.next();
 			String res=binaryToDecimal(s);//Write binaryToDecimal function
-			System.out.println(res);
+			System.out.print(res);
 		}
 	}
 	public static String binaryToDecimal(String str) {
