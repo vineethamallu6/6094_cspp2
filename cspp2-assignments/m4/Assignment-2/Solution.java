@@ -1,5 +1,18 @@
-import java.util.Scanner;
-public final class  Solution{
+/**missing.
+*/import java.util.Scanner;
+/**main class.
+*/
+public final class  Solution {
+	/**
+	main class.
+	*/
+	private Solution() {
+	/**constructior.
+	*/
+	}
+	/**main function.
+	*@param args String.
+	*/
 	public static void main(final String[] args) {
 		int m, n, i, j, p, q, k, l;
 		Scanner s = new Scanner(System.in);
