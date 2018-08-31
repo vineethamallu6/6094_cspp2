@@ -3,7 +3,7 @@
 import java.util.Scanner;
 /**import
 */
-public class Solution {/*
+public final class Solution {/*
 	Do not modify this main function.
 	*/
 	public static final int N_U_M = 10;
@@ -17,7 +17,7 @@ public class Solution {/*
 	/**main function.
 	*@param args String
 	*/
-	public static void main(String[] args) {
+	public static void main(final String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();
 		for(int i = 0; i < n; i++) {
@@ -29,7 +29,7 @@ public class Solution {/*
 	/**function.
 	*@param str String.
     */
-	public static String binaryToDecimal(String str) {
+	public static String binaryToDecimal(final String str) {
 		 int decimal = 0,i = 0;
 		 long n = Long.parseLong(str);
 		 while(n != 0) {
