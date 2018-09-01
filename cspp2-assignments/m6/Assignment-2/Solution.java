@@ -31,6 +31,22 @@ final class Solution {
                 if(value>50) {
                     a[i][j]=100;
                 }
+                if(value>100 && value<200)
+                {
+                    a[i][j]=200;
+                }
+                if(value>300 && value<400)
+                {
+                    a[i][j]=300;
+                }
+                if(value>400 && value<=500)
+                {
+                    a[i][j]=400;
+                }
+                if(value>500 && value<600)
+                {
+                    a[i][j]=500;
+                }
                 else{
                     a[i][j]=0;
                 }
