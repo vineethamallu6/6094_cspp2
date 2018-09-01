@@ -77,7 +77,7 @@ final class Solution {
                 int value = a[i][j];
                 if (value < N_U_M && value > 0) {
                     if (value >= N_O) {
-                    a[i][j] = N_U_M; 
+                    a[i][j] = N_U_M;
                 }
                     else {
                     a[i][j] = 0;
