@@ -77,51 +77,39 @@ final class Solution {
                 int value = a[i][j];
                 if (value < N_U_M && value > 0) {
                     if (value >= N_O) {
-                    a[i][j] = N_U_M; 
-                }
+                    a[i][j] = N_U_M; }
                     else {
-                    a[i][j] = 0;
-                }
+                    a[i][j] = 0; }
                 }
                 if (value > N_U_M && value < N_B) {
                     if (value < N_U) {
-                      a[i][j] = N_U_M;
-                    }
+                      a[i][j] = N_U_M; }
                     else {
-                      a[i][j] = N_B;  
-                    }
+                      a[i][j] = N_B; }
                 }
                 else if (value > N_B && value < N_E) { 
                     if (value < N_M) {
-                      a[i][j] = N_B;
-                    }
+                      a[i][j] = N_B; }
                     else {
-                      a[i][j] = N_E; 
-                    }
+                      a[i][j] = N_E; }
               }
                 else if (value > N_E && value <= N_I) {
                     if (value < N_R) {
-                      a[i][j] = N_E;
-                    }
+                      a[i][j] = N_E; }
                     else {
-                      a[i][j] = N_I; 
-                    }
+                      a[i][j] = N_I; }
                 }
                 else if (value > N_I && value < N_K) {
                     if (value < N_J) {
-                      a[i][j] = N_I;
-                    }
+                      a[i][j] = N_I; }
                     else {
-                      a[i][j] = N_K; 
-                    }
+                      a[i][j] = N_K; }
                 }
                 else if (value > N_K && value < N_P) {
                     if(value < N_L) {
-                      a[i][j] = N_K;
-                    }
+                      a[i][j] = N_K; }
                     else {
-                      a[i][j] = N_P;
-                  }
+                      a[i][j] = N_P; }
                 }
             }
         }
