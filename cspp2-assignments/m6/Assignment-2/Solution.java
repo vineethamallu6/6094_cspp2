@@ -9,6 +9,54 @@ final class Solution {
     /**
      * Constructs the object.
      */
+    public static final int N_U_M = 100;
+    /**.
+    number
+    */
+    public static final int N_O = 50;
+    /**.
+    num
+    */
+    public static final int N_U = 150;
+    /**.
+    nu
+    */
+    public static final int N_B = 200;
+    /**.
+    n
+    */
+    public static final int N_M = 250;
+    /**.
+    num
+    */
+    public static final int N_E = 300;
+    /**.
+    num
+    */
+    public static final int N_R = 350;
+    /**.
+    num
+    */
+    public static final int N_I = 400;
+    /**.
+    num
+    */
+    public static final int N_J = 450;
+    /**.
+    num
+    */
+    public static final int N_K = 500;
+    /**.
+    num
+    */
+    public static final int N_L = 550;
+    /**.
+    num
+    */
+    public static final int N_P = 600;
+    /**.
+    num
+    */
     private Solution() {
         //not used
     }
@@ -27,52 +75,52 @@ final class Solution {
         for (i = 0; i < rows; i++) {
             for (j = 0; j < columns; j++) {
                 int value = a[i][j];
-                if (value < 100 && value > 0) {
-                    if (value >= 50) {
-                    a[i][j] = 100;
+                if (value < N_U_M && value > 0) {
+                    if (value >= N_O) {
+                    a[i][j] = N_U_M;
                 }
                     else {
                     a[i][j] = 0;
                 }
                 }
-                if (value > 100 && value < 200) {
-                    if (value < 150) {
-                      a[i][j] = 100;
+                if (value > N_U_M && value < N_B) {
+                    if (value < N_U) {
+                      a[i][j] = N_U_M;
                     }
                     else {
-                      a[i][j] = 200;  
+                      a[i][j] = N_B;  
                     }
                 }
-                else if (value > 200 && value < 300) { 
-                    if (value < 250) {
-                      a[i][j] = 200;
+                else if (value > N_B && value < N_E) { 
+                    if (value < N_M) {
+                      a[i][j] = N_B;
                     }
                     else {
-                      a[i][j] = 300; 
+                      a[i][j] = N_E; 
                     }
               }
-                else if (value > 300 && value <= 400) {
-                    if (value < 350) {
-                      a[i][j] = 300;
+                else if (value > N_E && value <= N_I) {
+                    if (value < N_R) {
+                      a[i][j] = N_E;
                     }
                     else {
-                      a[i][j] = 400; 
+                      a[i][j] = N_I; 
                     }
                 }
-                else if (value > 400 && value < 500) {
-                    if (value < 450) {
-                      a[i][j] = 400;
+                else if (value > N_I && value < N_K) {
+                    if (value < N_J) {
+                      a[i][j] = N_I;
                     }
                     else {
-                      a[i][j] = 500; 
+                      a[i][j] = N_K; 
                     }
                 }
-                else if (value > 500 && value < 600) {
-                    if(value < 550) {
-                      a[i][j] = 500;
+                else if (value > N_K && value < N_P) {
+                    if(value < N_L) {
+                      a[i][j] = N_K;
                     }
                     else {
-                      a[i][j] = 600; 
+                      a[i][j] = N_P; 
                     }
                 }
             }
