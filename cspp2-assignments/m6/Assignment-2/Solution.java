@@ -23,60 +23,49 @@ final class Solution {
      * @return     Matrix of the rounded elements
      */
     static int[][] roundHundred(final int[][] a, final int rows, final int columns) {
-        int i,j;
-        for (i=0; i<rows; i++) 
-        {
-            for (j=0; j<columns; j++){
-                int value=a[i][j];
-                if(value<100 && value>0) {
-                    if(value>=50)
-                    a[i][j]=100;
+        int i, j;
+        for (i = 0; i < rows; i++) {
+            for (j = 0; j < columns; j++) {
+                int value = a[i][j];
+                if (value < 100 && value > 0) {
+                    if (value >= 50)
+                    a[i][j] = 100;
                     else
-                    a[i][j]=0;
+                    a[i][j] = 0;
                 }
-                if(value>100 && value<200)
-                {
-                    if(value<150)
-                      a[i][j]=100;
+                if (value > 100 && value < 200) {
+                    if (value < 150)
+                      a[i][j] = 100;
                     else
-                      a[i][j]=200;  
+                      a[i][j] = 200;  
                 }
-                else if(value>200 && value<300)
-                { 
-                    if(value<250)
-                      a[i][j]=200;
+                else if (value > 200 && value < 300) { 
+                    if (value < 250)
+                      a[i][j] = 200;
                     else
-                      a[i][j]=300; 
+                      a[i][j] = 300; 
               }
-                else if(value>300 && value<=400)
-                {
-                    if(value<350)
-                      a[i][j]=300;
+                else if (value > 300 && value <= 400) {
+                    if (value < 350)
+                      a[i][j] = 300;
                     else
-                      a[i][j]=400; 
+                      a[i][j] = 400; 
                 }
-                else if(value>400 && value<500)
-                {
-                    if(value<450)
-                      a[i][j]=400;
+                else if (value > 400 && value < 500) {
+                    if (value < 450)
+                      a[i][j] = 400;
                     else
-                      a[i][j]=500; 
+                      a[i][j] = 500; 
                 }
-                else if(value>500 && value<600)
-                {
-                    if(value<550)
-                      a[i][j]=500;
+                else if (value > 500 && value < 600) {
+                    if(value < 550)
+                      a[i][j] = 500;
                     else
-                      a[i][j]=600; 
+                      a[i][j] = 600; 
                 }
-                
-                
-            
+            }
         }
-        
-    }
-
-      return a;
+        return a;
 	// write ypur code here
 	
     }
