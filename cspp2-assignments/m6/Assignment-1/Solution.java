@@ -21,10 +21,10 @@ public final class Solution {
     	int count = 0, i, j;
     	for (i = 1; i < n; i ++) {
     	count = 0;
-    		if(i % 2 == 1) {
+    		if (i % 2 == 1) {
     		count = 0;
-    		for(j = 1; j <= i; j ++) {
-    			if(i % j == 0) {
+    		for (j = 1; j <= i; j ++) {
+    			if (i % j == 0) {
     				count = count + 1;
     			}
     		}
