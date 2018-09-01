@@ -31,43 +31,49 @@ final class Solution {
                     if (value >= 50) {
                     a[i][j] = 100;
                 }
-                    else
+                    else {
                     a[i][j] = 0;
+                }
                 }
                 if (value > 100 && value < 200) {
                     if (value < 150) {
                       a[i][j] = 100;
                     }
-                    else
+                    else {
                       a[i][j] = 200;  
+                    }
                 }
                 else if (value > 200 && value < 300) { 
                     if (value < 250) {
                       a[i][j] = 200;
                     }
-                    else
+                    else {
                       a[i][j] = 300; 
+                    }
               }
                 else if (value > 300 && value <= 400) {
                     if (value < 350) {
                       a[i][j] = 300;
                     }
-                    else
+                    else {
                       a[i][j] = 400; 
+                    }
                 }
                 else if (value > 400 && value < 500) {
                     if (value < 450) {
                       a[i][j] = 400;
                     }
-                    else
+                    else {
                       a[i][j] = 500; 
+                    }
                 }
                 else if (value > 500 && value < 600) {
                     if(value < 550) {
                       a[i][j] = 500;
                     }
-                    else
+                    else {
                       a[i][j] = 600; 
+                    }
                 }
             }
         }
