@@ -32,7 +32,6 @@ public final class Solution {
     		System.out.println(i);
     	     }
         }
-    	
     }
 }
     /**
@@ -43,7 +42,5 @@ public final class Solution {
         Scanner scan = new Scanner(System.in);
         int n = scan.nextInt();
         oddComposites(n);
-    
+    }
 }
-
-	}
