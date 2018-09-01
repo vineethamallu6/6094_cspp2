@@ -26,10 +26,13 @@ public final class Solution {
     				if(i%j==0) {
     					count +=1;
     				}
+    				
     			}
-    			if (count>2){
-    				System.out.println(j);
+    			if (count>3){
+    				System.out.println(i);
+    			
     			}
+
     		}    	
     	}
 	// write your code here
