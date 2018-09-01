@@ -20,23 +20,26 @@ public final class Solution {
     static void oddComposites(final int n) {
     	int count=0,i,j;
     	for (i=1;i<n;i++)
+    {
+    	count=0;
+    		if(i%2==1)
     	{
-    		if (i%2 != 0){
-    			for (j=1;j<i;j++) {
-    				if(i%j==0) {
-    					count +=1;
-    				}
-    				
-    			}
-    			if (count>3){
-    				System.out.println(i);
-    			
-    			}
+    		count=0;
+    		for(j=1;j<=i;j++)
+    		{
 
-    		}    	
-    	}
-	// write your code here
+    			if(i%j==0)
+    			{
+    				count=count+1;
+    			}
+    		}
+    		if (count>2){
+    		System.out.println(i);
+    	     }
+        }
+    	
     }
+}
     /**
     * main method as driver program.
     * @param args is the parameter for this method
@@ -45,6 +48,7 @@ public final class Solution {
         Scanner scan = new Scanner(System.in);
         int n = scan.nextInt();
         oddComposites(n);
-    }
+    
 }
 
+	}
