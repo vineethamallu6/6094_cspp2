@@ -28,7 +28,6 @@ final class Solution {
         {
             for (j=0; j<columns; j++){
                 int value=a[i][j];
-                System.out.println(value);
                 if(value>50) {
                     a[i][j]=100;
                 }
