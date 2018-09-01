@@ -89,8 +89,8 @@ final class Solution {
                       a[i][j] = N_B;
                   }
                 }
-                else if (value > N_B && value < N_E) { 
-                    if (value < N_M) {a[i][j] = N_B; }
+                else if (value > N_B && value < N_E) {
+                    if (value < N_M) { a[i][j] = N_B; }
                     else {
                       a[i][j] = N_E;
                   }
