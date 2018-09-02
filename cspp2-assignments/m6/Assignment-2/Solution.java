@@ -23,7 +23,7 @@ final class Solution {
     */
     public static final int N_B = 200;
     /**.
-    n
+    * n
     */
     public static final int N_M = 250;
     /**.
@@ -35,7 +35,7 @@ final class Solution {
     */
     public static final int N_R = 350;
     /**.
-    num
+    * num
     */
     public static final int N_I = 400;
     /**.
@@ -86,22 +86,26 @@ final class Solution {
                 if (value > N_U_M && value < N_B) {
                     if (value < N_U) {
                       a[i][j] = N_U_M; 
-                  } else { a[i][j] = N_B; }
+                }   else { a[i][j] = N_B; }
               } else if (value > N_B && value < N_E) {
-                    if (value < N_M) { a[i][j] = N_B; 
+                    if (value < N_M) { 
+                        a[i][j] = N_B; 
                   } else { a[i][j] = N_E; }
               
               } else if (value > N_E && value <= N_I) {
-                    if (value < N_R) { a[i][j] = N_E; 
+                    if (value < N_R) { 
+                        a[i][j] = N_E; 
                   } else { a[i][j] = N_I; }
-                }
-                else if (value > N_I && value < N_K) {
-                    if (value < N_J) { a[i][j] = N_I; }
-                    else { a[i][j] = N_K; }
-                }
-                else if (value > N_K && value < N_P) {
-                    if (value < N_L) { a[i][j] = N_K; }
-                    else { a[i][j] = N_P; }
+               
+            }   else if (value > N_I && value < N_K) {
+                    if (value < N_J) { 
+                        a[i][j] = N_I; 
+                  } else { a[i][j] = N_K; }
+                
+              } else if (value > N_K && value < N_P) {
+                    if (value < N_L) { 
+                        a[i][j] = N_K; 
+                  } else { a[i][j] = N_P; }
                 }
             }
         }
