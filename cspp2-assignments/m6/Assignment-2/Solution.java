@@ -90,22 +90,26 @@ final class Solution {
               } else if (value > N_B && value < N_E) {
                     if (value < N_M) {
                         a[i][j] = N_B;
-                  } else { a[i][j] = N_E; }
+                  } else { 
+                    a[i][j] = N_E; }
 
               } else if (value > N_E && value <= N_I) {
                     if (value < N_R) {
                         a[i][j] = N_E;
-                  } else { a[i][j] = N_I; }
+                  } else { 
+                    a[i][j] = N_I; }
 
             }   else if (value > N_I && value < N_K) {
                     if (value < N_J) {
                         a[i][j] = N_I;
-                  } else { a[i][j] = N_K; }
+                  } else { 
+                    a[i][j] = N_K; }
 
               } else if (value > N_K && value < N_P) {
                     if (value < N_L) {
                         a[i][j] = N_K;
-                  } else { a[i][j] = N_P; 
+                  } else { 
+                    a[i][j] = N_P; 
                   }
                 }
             }
