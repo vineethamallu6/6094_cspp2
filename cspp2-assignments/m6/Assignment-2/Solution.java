@@ -86,7 +86,8 @@ final class Solution {
                 if (value > N_U_M && value < N_B) {
                     if (value < N_U) {
                       a[i][j] = N_U_M;
-                }   else { a[i][j] = N_B; }
+                }   else { 
+                    a[i][j] = N_B; }
               } else if (value > N_B && value < N_E) {
                     if (value < N_M) {
                         a[i][j] = N_B;
@@ -108,7 +109,7 @@ final class Solution {
               } else if (value > N_K && value < N_P) {
                     if (value < N_L) {
                         a[i][j] = N_K;
-                  } else { 
+                  } else {
                     a[i][j] = N_P; 
                   }
                 }
