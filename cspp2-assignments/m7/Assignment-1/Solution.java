@@ -1,11 +1,30 @@
 import java.util.Scanner;
+/**
+* Class for InputValidator.
+*/
 class InputValidator {
- int length;
- String data;
+/**
+* length is attribute.
+*/
+private int length;
+/**
+* data is attribute.
+*/
+ private String data;
+ /**
+ * constructor for InputValidator.
+ *
+ *@param      input is input.
+ */
 public InputValidator(String input) {
  	data = input;
  	length = input.length();
  }
+ /**
+ * function to return true or false based on given input.
+ *
+ *@return     return true or false.
+ */
  boolean validateData() {
  	final int var = 6;
  	if (length >= var) {
@@ -14,7 +33,19 @@ public InputValidator(String input) {
  	return false;
  	}
  }
-public class Solution {
+ /**
+ * class Solution that contains main method.
+ */
+final class Solution {
+	/**constructor for solution.
+	*/
+	private Solution() {
+}
+/**
+* main function.
+*
+*@param    args  the arguments
+*/
 	public static void main(String args[]) {
     	Scanner s = new Scanner(System.in);
     	String input = s.next();
