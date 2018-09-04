@@ -16,7 +16,7 @@ private int length;
  *
  *@param      input is input.
  */
-public InputValidator(final String input) {
+InputValidator(final String input) {
     data = input;
     length = input.length();
  }
