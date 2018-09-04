@@ -5,7 +5,7 @@ class InputValidator
  String data;
 public InputValidator(String input)
  {
- 	data=input;
+ 	data = input;
  	length = input.length();
  }
  boolean validateData() {
