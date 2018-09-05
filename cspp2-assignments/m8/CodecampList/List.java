@@ -223,6 +223,13 @@ public class List {
     * of the specified element in this list,
     * or -1 if this list does not contain the element.
     */
+    /**
+     * contains function.
+     *
+     *@param    item  int  item
+     *
+     *@return     { boolean }
+     */
     public int indexOf(final int item) {
         for (int i = 0; i < size; i++) {
             if (arr[i] == item) {
