@@ -92,6 +92,11 @@ public class List {
      *
      * The method returns void (nothing)
      */
+    /**
+     * add method.
+     *
+     *@param      item   int item
+     */
     public void add(final int item) {
         //Inserts the specified element at the end of the list.
         arr[size] = item;
@@ -103,6 +108,11 @@ public class List {
      * to the objects outside the list
      *
      * The method returns an int. Empty list should return 0.
+     */
+    /**
+     * size function.
+     *
+     *@return     { int size }
      */
     public int size() {
         // replace the code below to implement the size method
