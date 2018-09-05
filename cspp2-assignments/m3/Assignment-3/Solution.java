@@ -15,10 +15,10 @@ public final class Solution {
     */
     public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
-        int n1 = s.nextInt();
-        int n2 = s.nextInt();
-        gcd(n1, n2);
-        System.out.println(gcd(n1, n2));
+        int numberOne = s.nextInt();
+        int numberTwo = s.nextInt();
+        gcd(numberOne, numberTwo);
+        System.out.println(gcd(numberOne, numberTwo));
     }
     /**
     gcd function.
