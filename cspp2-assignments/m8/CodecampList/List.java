@@ -124,10 +124,8 @@ public class List {
         if (index >= 0 && index < size) {
         for (int i = index; i < size - 1; i++)
         {
-    
-        		arr[i] = arr[i + 1];
-        
-        }
+            arr[i] = arr[i + 1];
+            }
         arr[size--] = 0;
     }
     else {
