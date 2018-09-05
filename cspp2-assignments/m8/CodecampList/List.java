@@ -82,7 +82,7 @@ public class List {
      * 
      * The method returns void (nothing)
      */
-    public void add(int item) {
+    public void add(final int item) {
         //Inserts the specified element at the end of the list.
         arr[size] = item;
         size++;
@@ -118,17 +118,17 @@ public class List {
      * array = [1,3,0,0,0,0,0,0,0,0]
      * The method returns void (nothing)
      */
-    public void remove(int index) {
+    public void remove (final int index) {
         // write the logic for remove here.
         // Think about what to do to the size variable.
-        if (index>=0 && index<size) {
+        if (index >= 0 && index < size) {
         for (int i = index; i < size - 1; i++)
         {
     
         		arr[i] = arr[i + 1];
         
         }
-        arr[size--]=0;
+        arr[size--] = 0;
     }
     else { 
     	System.out.println("Invalid Position Exception");
@@ -145,8 +145,8 @@ public class List {
      * How do we check if the position is greater than the 
      * number of items in the list? Would size variable be useful?
      */
-    public void get(final int index) {
-    	if (index>0 && index<size) {
+    public void get (final int index) {
+    	if (index > 0 && index < size) {
     		System.out.println(arr[index]);
     		}
     	}
@@ -172,11 +172,11 @@ public class List {
      *
      */
     public String toString() {
-    	String temp="[";
-    	for (int i=0;i<size-1;i++){
-    		temp+=arr[i]+",";
+    	String temp = "[";
+    	for (int i = 0; i < size - 1; i++){
+    		temp += arr[i] + ",";
     	}
-    	temp+=arr[size-1]+"]";
+    	temp += arr[size - 1] + "]";
     	return temp;
     }
     /*
@@ -185,7 +185,7 @@ public class List {
      * So, iterate through the list and return true if
      * the item exists and otherwise false
      */
-    public boolean contains(int item) {
+    public boolean contains( final int item) {
     	return indexOf(item) >= 0;
     }
     /*
@@ -202,7 +202,7 @@ public class List {
     
     	return -1;
     }
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
         // code to read the test cases input file
