@@ -166,6 +166,11 @@ public class List {
      * How do we check if the position is greater than the
      * number of items in the list? Would size variable be useful?
      */
+    /**
+     * get index of elements.
+     *
+     * @param     index  int  index
+     */
     public void get(final int index) {
         if (index > 0 && index < size) {
             System.out.println(arr[index]);
