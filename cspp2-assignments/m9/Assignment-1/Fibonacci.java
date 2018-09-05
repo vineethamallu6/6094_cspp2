@@ -25,8 +25,15 @@ final public class Fibonacci {
      * Look for the hint.txt if some of the testcases fail.
      */
     private Fibonacci() {
-
+    /**constructor.
+    */
     }
+    /**
+    method for fibonacci.
+    *@return array
+    /**parameters 
+    *@param n int
+    */
     public static List fib(final int n) {
         List objlist = new List(n);
         objlist.add(0);
@@ -42,6 +49,10 @@ final public class Fibonacci {
          }
          return objlist;
      }
+     /**
+     main function.
+     *@param args String
+     */
      public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
         int n = s.nextInt();
