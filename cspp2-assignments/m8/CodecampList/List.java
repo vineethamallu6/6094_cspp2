@@ -33,6 +33,7 @@ public class List {
     // declare a private int[]
     // don't create the array yet using new
     // that's the job of the List constructor
+
     /*
      * What are the other class variables needed for creating a list?
      * How about keeping track of the size of the list?
@@ -248,9 +249,9 @@ public class List {
      * this is main method.
      *
      *@param    args the arguments
-     */
+     */ 
     public static void main(final String[] args) {
-    // create an object of the list to invoke methods on it
+        // create an object of the list to invoke methods on it
         List l = new List();
         // code to read the test cases input file
         Scanner stdin = new Scanner(new BufferedInputStream(System.in));
@@ -290,7 +291,7 @@ public class List {
                 System.out.println(l.contains(Integer.parseInt(tokens[1])));
                 break;
                 default:
-                System.out.print("");
+                System.out.println("");
             }
         }
     }
