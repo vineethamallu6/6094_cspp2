@@ -1,8 +1,8 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 public class List {
-	//Implement all the methods mentioned to build a ListADT
-	/*
+    //Implement all the methods mentioned to build a ListADT
+    /*
      * The goal for the list is to store items.
      * How are we going to store the items in the list?
      * An array would be good. Right?
@@ -56,10 +56,10 @@ public class List {
      * class variables with some default values.
      */
     public List() {
-    	size = 0;
-    	final int a = 10;
-    	arr = new int[a];
-    	// what are the two variables to be initialized here?
+        size = 0;
+        final int a = 10;
+        arr = new int[a];
+        // what are the two variables to be initialized here?
         // think about the private variables described above.
         // What should be the default values?
         // In the case of the list, it should be empty but
@@ -140,10 +140,10 @@ public class List {
      * number of items in the list? Would size variable be useful?
      */
     public void get(final int index) {
-    	if (index > 0 && index < size) {
-    		System.out.println(arr[index]);
-    		}
-    	}
+        if (index > 0 && index < size) {
+            System.out.println(arr[index]);
+            }
+        }
         /*
      * What happens when you print an object using println?
      * Java provides a method named toString that is internally
@@ -165,12 +165,12 @@ public class List {
      *
      */
     public String toString() {
-    	String temp = "[";
-    	for (int i = 0; i < size - 1; i++) {
+        String temp = "[";
+        for (int i = 0; i < size - 1; i++) {
             temp += arr[i] + ",";
         }
-    	temp += arr[size - 1] + "]";
-    	return temp;
+        temp += arr[size - 1] + "]";
+        return temp;
     }
     /*
      * Contains return true if the list has
@@ -187,9 +187,9 @@ public class List {
     * or -1 if this list does not contain the element.
     */
     public int indexOf(final int item) {
-    	for (int i = 0; i < size; i++) {
-    		if (arr[i] == item) {
-    			return i;
+        for (int i = 0; i < size; i++) {
+            if (arr[i] == item) {
+                return i;
             }
         }
         return -1;
@@ -236,5 +236,5 @@ public class List {
                 break;
             }
         }
-	}
+    }
 }
