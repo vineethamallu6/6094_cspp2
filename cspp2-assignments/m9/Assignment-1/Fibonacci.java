@@ -28,9 +28,9 @@ final public class Fibonacci {
 
     }
     public static List fib(final int n) {
-        List list = new List(n);
-        list.add(0);
-        list.add(1);
+        List objlist = new List(n);
+        objlist.add(0);
+        objlist.add(1);
         int initial = 0;
         int addtoinitial = 1;
         int keepinitial = 0;
@@ -38,9 +38,9 @@ final public class Fibonacci {
         keepinitial = initial;
         initial = addtoinitial;
         addtoinitial = keepinitial + addtoinitial;
-        list.add(addtoinitial);
+        objlist.add(addtoinitial);
          }
-         return list;
+         return objlist;
      }
      public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
