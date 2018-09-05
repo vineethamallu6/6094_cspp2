@@ -17,7 +17,7 @@ import java.util.Scanner;
  *
  */
 
-public class Fibonacci
+final public class Fibonacci
 {
     /*
      * fib is a static method takes a argument n
@@ -27,7 +27,7 @@ public class Fibonacci
      * Look for the hint.txt if some of the testcases fail.
      */
     
-    public static List fib(int n) {
+    public static List fib(final int n) {
     	List list = new List(n);
     	list.add(0);
     	list.add(1);
