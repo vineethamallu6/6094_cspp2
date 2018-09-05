@@ -31,10 +31,10 @@ public class Fibonacci
     	List list = new List(n);
     	list.add(0);
     	list.add(1);
-    	int initial =0; 
+    	int initial = 0; 
     	int addtoinitial = 1;
         int keepinitial = 0;
-        for(int i = 2; i <n; i++) {
+        for(int i = 2; i < n; i++) {
         keepinitial = initial;
         initial = addtoinitial;
         addtoinitial = keepinitial + addtoinitial;
