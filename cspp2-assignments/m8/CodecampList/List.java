@@ -196,6 +196,11 @@ public class List {
      * not all the elements of the array.
      *
      */
+    /**
+     * returns a String.
+     *
+     *@return    String
+     */
     public String toString() {
         String temp = "[";
         for (int i = 0; i < size - 1; i++) {
