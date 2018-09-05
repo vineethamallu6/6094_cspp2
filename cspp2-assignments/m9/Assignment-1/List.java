@@ -93,8 +93,8 @@ public class List {
      * constructor.
      * 
      */
-     public List(int n) {
-        list = new int[n];
+     public List(int numberRange) {
+        list = new int[numberRange];
         size =0;
     }
 

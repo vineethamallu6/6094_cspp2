@@ -40,14 +40,14 @@ final public class Fibonacci {
     /**parameters
     *@param n int
     */
-    public static List fib(final int n) {
-        List objlist = new List(n);
+    public static List fib(final int numberRange) {
+        List objlist = new List(numberRange);
         objlist.add(0);
         objlist.add(1);
         int initial = 0;
         int addtoinitial = 1;
         int keepinitial = 0;
-        for (int i = 2; i < n; i++) {
+        for (int i = 2; i < numberRange; i++) {
         keepinitial = initial;
         initial = addtoinitial;
         addtoinitial = keepinitial + addtoinitial;
@@ -61,7 +61,7 @@ final public class Fibonacci {
      */
      public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
-        int n = s.nextInt();
-        System.out.println(fib(n));
+        int numberRange = s.nextInt();
+        System.out.println(fib(numberRange));
     }
 }
