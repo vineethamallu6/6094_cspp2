@@ -174,8 +174,8 @@ public class List {
     public String toString() {
     	String temp = "[";
     	for (int i = 0; i < size - 1; i++){
-    		temp += arr[i] + ",";
-    	}
+            temp += arr[i] + ",";
+        }
     	temp += arr[size - 1] + "]";
     	return temp;
     }
@@ -186,7 +186,7 @@ public class List {
      * the item exists and otherwise false
      */
     public boolean contains( final int item) {
-    	return indexOf(item) >= 0;
+        return indexOf(item) >= 0;
     }
     /*
     * Returns the index of the first occurrence
