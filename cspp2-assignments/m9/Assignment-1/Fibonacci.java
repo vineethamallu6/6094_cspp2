@@ -27,6 +27,9 @@ final public class Fibonacci {
      *
      * Look for the hint.txt if some of the testcases fail.
      */
+    /**
+    Fibonacci class.
+    */
     private Fibonacci() {
     /**constructor.
     */
