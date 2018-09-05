@@ -215,6 +215,13 @@ public class List {
      * So, iterate through the list and return true if
      * the item exists and otherwise false
      */
+    /**
+     * contains function.
+     *
+     *@param    item  int  item
+     *
+     *@return     { boolean }
+     */
     public boolean contains(final int item) {
         return indexOf(item) >= 0;
     }
@@ -228,7 +235,7 @@ public class List {
      *
      *@param    item  int  item
      *
-     *@return     { boolean }
+     *@return   item  int item
      */
     public int indexOf(final int item) {
         for (int i = 0; i < size; i++) {
