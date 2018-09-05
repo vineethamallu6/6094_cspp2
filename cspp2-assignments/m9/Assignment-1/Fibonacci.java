@@ -26,6 +26,9 @@ final public class Fibonacci
      *
      * Look for the hint.txt if some of the testcases fail.
      */
+    private Fibonacci() {
+    	
+    }
     
     public static List fib(final int n) {
     	List list = new List(n);
