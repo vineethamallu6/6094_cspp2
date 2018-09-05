@@ -248,9 +248,9 @@ public class List {
      * this is main method.
      *
      *@param    args the arguments
-     */ 
+     */
     public static void main(final String[] args) {
-        // create an object of the list to invoke methods on it
+    // create an object of the list to invoke methods on it
         List l = new List();
         // code to read the test cases input file
         Scanner stdin = new Scanner(new BufferedInputStream(System.in));
