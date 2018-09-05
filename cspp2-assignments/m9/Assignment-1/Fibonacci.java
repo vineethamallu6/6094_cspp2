@@ -31,7 +31,7 @@ final public class Fibonacci {
     /**
     method for fibonacci.
     *@return array
-    /**parameters 
+    /**parameters
     *@param n int
     */
     public static List fib(final int n) {
