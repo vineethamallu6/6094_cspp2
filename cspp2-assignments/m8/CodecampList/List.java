@@ -79,7 +79,7 @@ public class List {
      * Is it the same as the end of the array?
      * Think about how you can use the size variable to add item
      * to the list.
-     * 
+     *
      * The method returns void (nothing)
      */
     public void add(final int item) {
@@ -91,7 +91,7 @@ public class List {
      * The size method returns the value of the size.
      * The purpose of the method is to announce the size of the list
      * to the objects outside the list
-     * 
+     *
      * The method returns an int. Empty list should return 0.
      */
     public int size() {
@@ -102,7 +102,7 @@ public class List {
      * The remove method does what the name suggests.
      * Removes an int item, specified by the index argument, from the list
      * It also does an additional step.
-     * Think about what happens when 
+     * Think about what happens when
      * an item is removed from the middle of the list
      * It creates a hole in the list, right?
      * This would mean, all the items that are
