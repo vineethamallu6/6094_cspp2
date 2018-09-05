@@ -16,6 +16,9 @@ import java.util.Scanner;
  * by invoking the add method provided in the List ADT.
  *
  */
+/** 
+main class.
+*/
 final public class Fibonacci {
     /*
      * fib is a static method takes a argument n
