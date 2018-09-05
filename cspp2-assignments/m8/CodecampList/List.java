@@ -197,10 +197,9 @@ public class List {
     	for (int i = 0; i < size; i++) {
     		if (arr[i] == item) {
     			return i;
-    		}
-    	}
-    
-    	return -1;
+            }
+        }
+        return -1;
     }
     public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
