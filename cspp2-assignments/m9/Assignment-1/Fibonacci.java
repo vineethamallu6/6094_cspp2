@@ -27,14 +27,13 @@ final public class Fibonacci
      * Look for the hint.txt if some of the testcases fail.
      */
     private Fibonacci() {
-    	
+
     }
-    
     public static List fib(final int n) {
     	List list = new List(n);
     	list.add(0);
     	list.add(1);
-    	int initial = 0; 
+    	int initial = 0;
     	int addtoinitial = 1;
         int keepinitial = 0;
         for(int i = 2; i < n; i++) {
@@ -44,12 +43,8 @@ final public class Fibonacci
         list.add(addtoinitial);
          }
          return list;
-
      }
-    	
-    
-
-	public static void main(String[] args) {
+     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         int n = s.nextInt();
         System.out.println(fib(n));
