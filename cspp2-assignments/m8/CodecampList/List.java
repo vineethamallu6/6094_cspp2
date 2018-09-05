@@ -150,8 +150,7 @@ public class List {
     		System.out.println(arr[index]);
     		}
     	}
-    
-    /*
+        /*
      * What happens when you print an object using println?
      * Java provides a method named toString that is internally
      * invoked when an object variable is used in println.
@@ -160,7 +159,7 @@ public class List {
      * System.out.println(l);
      * This statement is a shortcut for
      * System.out.println(l.toString());
-     * 
+     *
      * So, implement the toString method to display the items
      * in the list in the square brackets notation.
      * i.e., if the list has numbers 1, 2, 3
