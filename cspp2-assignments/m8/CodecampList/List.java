@@ -29,7 +29,6 @@ public class List {
     /**
      * this is a constructor.
      */
-    private int size;
     private int[] arr;
     // declare a private int[]
     // don't create the array yet using new
@@ -54,6 +53,10 @@ public class List {
      * to be accessed by the methods that are outside of the List class.
      *
      */
+    /**
+     * declaring size variable.
+     */
+    private int size;
      // declare a private int size
     // again, don't initialize it here
     // variable initialization should be done in the constructor
