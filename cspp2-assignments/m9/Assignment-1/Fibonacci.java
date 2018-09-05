@@ -38,7 +38,7 @@ final public class Fibonacci {
     method for fibonacci.
     *@return array
     /**parameters
-    *@param n int
+    *@param numberRange int
     */
     public static List fib(final int numberRange) {
         List objlist = new List(numberRange);
