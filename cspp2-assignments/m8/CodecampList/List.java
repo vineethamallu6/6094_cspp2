@@ -1,6 +1,9 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 public class List {
+    /**
+     * this is class.
+     */
     //Implement all the methods mentioned to build a ListADT
     /*
      * The goal for the list is to store items.
@@ -22,7 +25,10 @@ public class List {
      * will protect the array such corruption.
      * This is a hard concept to understand. Discuss with your mentor.
      *
-    */
+     */
+    /**
+     * this is a constructor.
+     */
     private int size;
     private int[] arr;
     // declare a private int[]
