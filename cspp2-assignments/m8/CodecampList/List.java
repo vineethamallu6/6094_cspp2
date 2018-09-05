@@ -130,8 +130,8 @@ public class List {
         }
         arr[size--] = 0;
     }
-    else { 
-    	System.out.println("Invalid Position Exception");
+    else {
+        System.out.println("Invalid Position Exception");
     }
     }
     /*
@@ -142,7 +142,7 @@ public class List {
      * How can an element not be there at a given position?
      * Well, if the position is greater than the number of items
      * in the list then that would mean the item doesn't exist.
-     * How do we check if the position is greater than the 
+     * How do we check if the position is greater than the
      * number of items in the list? Would size variable be useful?
      */
     public void get (final int index) {
@@ -189,10 +189,10 @@ public class List {
     	return indexOf(item) >= 0;
     }
     /*
-     * Returns the index of the first occurrence 
-     * of the specified element in this list,
-     * or -1 if this list does not contain the element.
-     */
+    * Returns the index of the first occurrence
+    * of the specified element in this list,
+    * or -1 if this list does not contain the element.
+    */
     public int indexOf(final int item) {
     	for (int i = 0; i < size; i++) {
     		if (arr[i] == item) {
