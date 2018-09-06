@@ -268,9 +268,11 @@ public class List {
    /*Inserts all the elements of specified int 
     array to the end of list*/
     public void addAll(int items[]) {
-      list = Arrays.copyOf(list, size+items.length);
-      for (int i = size; i < list.length; i++) {
-        list[size]=items[i];
+        int j=0;
+        int length = size+items.length;
+      for (int i = size; i < length; i++) {
+        list[i]=items[j];
+        j++;
         size++;
       }
     }
@@ -281,9 +283,13 @@ public class List {
         The method returns void (nothing)
      */
     public void add(int index,int item) {
-         for (int i=0; i>=index; i++) {
-            list[i+1] = list[i];
-            list[i] = item;         }
+         for (int i=size; i>index; i--) {
+            list[i] = list[i-1];
+            
+        }
+            list[index] = item; 
+            size++; 
+                 
     }
     
     /* Returns the count of occurances of a given item in the list*/
@@ -303,7 +309,7 @@ public class List {
         // create an object of the list to invoke methods on it
         Scanner stdin = new Scanner(new BufferedInputStream(System.in));
         int n=stdin.nextInt();
-        List l = new List(n);
+        List l = new List();
         // code to read the test cases input file
         // check if there is one more line to process
         while (stdin.hasNext()) {
