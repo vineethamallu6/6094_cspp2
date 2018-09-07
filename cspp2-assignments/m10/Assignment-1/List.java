@@ -271,6 +271,9 @@ public class List {
    /*Inserts all the elements of specified int 
     array to the end of list*/
     public void addAll(int items[]) {
+        if ((size() + items.length) > 10) {
+            list = resize();
+        }
         int j=0;
         int length = size+items.length;
       for (int i = size; i < length; i++) {
