@@ -144,6 +144,9 @@ public class List {
      * You know enough of Object Oriented Programming to answer these questions :-)
      *
      */
+    private int[] resize() {
+        return Arrays.copyOf(list, 2 * list.length);
+    }
 
     // todo create resize method
 
@@ -283,14 +286,17 @@ public class List {
         The method returns void (nothing)
      */
     public void add(int index,int item) {
-         for (int i=size; i>index; i--) {
+        if(index >= 0 && index <= size) {
+         for (int i = size; i >= index; i--) {
             list[i] = list[i-1];
             
         }
             list[index] = item; 
             size++; 
-                 
-    }
+        } else {
+            System.out.println("Negative Index Exception");
+        }
+}
     
     /* Returns the count of occurances of a given item in the list*/
     public int count(int item)
