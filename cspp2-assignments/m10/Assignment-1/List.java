@@ -279,8 +279,8 @@ public class List {
       for (int i = size; i < length; i++) {
         list[i]=items[j];
         j++;
-        size++;
       }
+      size = size + items.length;
     }
 
      /* 
