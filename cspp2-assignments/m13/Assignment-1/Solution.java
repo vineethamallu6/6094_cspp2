@@ -129,6 +129,10 @@ public int[][] cartesianProduct(Set anotherSet) {
 	int row = this.size() * anotherSet.size();
         int col = 2;
         int[][] product = new int[row][col];
+        if (size==0) {
+        	return null;
+        }
+        else {
         int k = 0;
         for (int i = 0; i < this.size(); i++) {
             for (int j = 0; j < anotherSet.size(); j++) {
@@ -138,6 +142,7 @@ public int[][] cartesianProduct(Set anotherSet) {
             }
         }
         return product;
+    }
 }
 }
 
