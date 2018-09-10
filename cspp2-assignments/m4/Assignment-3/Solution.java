@@ -7,7 +7,7 @@ public final class Solution {
 /**
     Do not modify this main function.
     */
-    public static final int N_U_M = 10;
+    public static final int num = 10;
     /**
     Number.
     */
@@ -20,11 +20,11 @@ public final class Solution {
     */
     public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        for (int i = 0; i < n; i++) {
-            String s = sc.next();
-            String res = binaryToDecimal(s);
-            System.out.println(res);
+        int sizeOfArray = sc.nextInt();
+        for (int i = 0; i < sizeOfArray; i++) {
+            String givenString = sc.next();
+            String result = binaryToDecimal(givenString);
+            System.out.println(result);
         }
     }
     /**
@@ -35,14 +35,14 @@ public final class Solution {
     */
     public static String binaryToDecimal(final String str) {
          int decimal = 0, i = 0;
-         long n = Long.parseLong(str);
-         while (n != 0) {
-            decimal += ((n % N_U_M) * Math.pow(2, i));
-            n = n / N_U_M;
+         long number = Long.parseLong(str);
+         while (number != 0) {
+            decimal += ((number % num) * Math.pow(2, i));
+            number = number / num;
             i++;
          }
-         String s1 = decimal + "";
-         return s1;
+         String resultString = decimal + "";
+         return resultString;
 
     }
 
