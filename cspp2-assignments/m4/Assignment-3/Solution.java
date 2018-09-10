@@ -7,7 +7,7 @@ public final class Solution {
 /**
     Do not modify this main function.
     */
-    public static final int num = 10;
+    public static final int A = 10;
     /**
     Number.
     */
@@ -37,8 +37,8 @@ public final class Solution {
          int decimal = 0, i = 0;
          long number = Long.parseLong(str);
          while (number != 0) {
-            decimal += ((number % num) * Math.pow(2, i));
-            number = number / num;
+            decimal += ((number % A) * Math.pow(2, i));
+            number = number / A;
             i++;
          }
          String resultString = decimal + "";
