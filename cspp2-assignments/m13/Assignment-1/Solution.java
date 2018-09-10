@@ -39,13 +39,13 @@ class Set {
      * @return     { description_of_the_return_value }
      */
     public boolean contains(int item){
-    	int count=0;
-    	for (int i=0; i<size; i++){
+    	int count = 0;
+    	for (int i = 0; i < size; i++){
           if (list[i] == item) {
           count++;
           }
       }
-          if(count>0){
+          if(count > 0){
           	return true;
           }
           return false;
@@ -148,8 +148,8 @@ public void add(int item) {
  	Set intersection = new Set();
  	int j = 0;
  	for (int i = 0; i < size; i++) {
- 		for (j=0;j<otherSet.size();j++) {
- 		if(list[i]==otherSet.get(j)) {
+ 		for (j = 0; j < otherSet.size(); j++) {
+ 		if(list[i] == otherSet.get(j)) {
  			intersection.add(list[i]);
  			//System.out.println(j);
  			//System.out.println(i);
@@ -169,8 +169,8 @@ public void add(int item) {
  		Set result = new Set();
  	int j = 0;
  	for (int i = 0; i < size; i++) {
-        for (j=0;j<anotherArray.length;j++){
- 		if(list[i]==anotherArray[j]) {
+        for (j = 0; j < anotherArray.length; j++) {
+ 		if (list[i] == anotherArray[j]) {
  			result.add(anotherArray[j]);
  			j++;
  		}
@@ -190,7 +190,7 @@ public int[][] cartesianProduct(Set anotherSet) {
 	int row = this.size() * anotherSet.size();
         int col = 2;
         int[][] product = new int[row][col];
-        if (size==0) {
+        if (size == 0) {
         	return null;
         }
         if (anotherSet.size() == 0) {
