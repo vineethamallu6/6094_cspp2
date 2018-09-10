@@ -49,8 +49,8 @@ final class Fibonacci {
         int keepInitial = 0;
         for (int i = 2; i < numberRange; i++) {
         keepInitial = initial;
-        initial = addIinitial;
-        addIinitial = keepInitial + addIinitial;
+        initial = addInitial;
+        addInitial = keepInitial + addInitial;
         objlist.add(addInitial);
          }
          return objlist;
