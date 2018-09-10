@@ -132,6 +132,9 @@ public int[][] cartesianProduct(Set anotherSet) {
         if (size==0) {
         	return null;
         }
+        if (anotherSet.size() == 0) {
+        	return null;
+        }
         else {
         int k = 0;
         for (int i = 0; i < this.size(); i++) {
