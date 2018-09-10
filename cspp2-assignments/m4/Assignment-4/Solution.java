@@ -25,7 +25,7 @@ Do not modify the main function.
     reverseString function.
     *@return String
     /**parameters.
-    *@param s String
+    *@param stringGiven String
     */
     public static String reverseString(final String stringGiven) {
         String rev = "";
