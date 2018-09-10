@@ -45,13 +45,13 @@ final class Fibonacci {
         objlist.add(0);
         objlist.add(1);
         int initial = 0;
-        int addtoinitial = 1;
-        int keepinitial = 0;
+        int addInitial = 1;
+        int keepInitial = 0;
         for (int i = 2; i < numberRange; i++) {
-        keepinitial = initial;
-        initial = addtoinitial;
-        addtoinitial = keepinitial + addtoinitial;
-        objlist.add(addtoinitial);
+        keepInitial = initial;
+        initial = addIinitial;
+        addIinitial = keepInitial + addIinitial;
+        objlist.add(addInitial);
          }
          return objlist;
      }
