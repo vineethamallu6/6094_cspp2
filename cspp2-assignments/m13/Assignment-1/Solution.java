@@ -13,16 +13,22 @@ class Set {
     	list = new int[10];
     	size = 0;
     }
-    public Set(int capacity) {
-       list = new int[capacity];
+
+    /**
+     *
+     *
+     * @param      capacity  The capacity
+     */
+    public Set(int capacity){
+       list=new int[capacity];
        size = 0;
     }
     public int size(){
     	return size;
     }
-    public boolean contains(int item) {
+    public boolean contains(int item){
     	int count=0;
-    	for (int i=0; i<size; i++) {
+    	for (int i=0; i<size; i++){
           if (list[i] == item) {
           count++;
           }
@@ -51,18 +57,34 @@ class Set {
      }
 
 public void add(int item) {
+    if (size == list.length) {
+            resize();
+        } else {
+            if (!this.contains(item)) {
 	list[size++] = item;
 }
-public void add(int []newArray) {
-	if ((size() + newArray.length) > 10) {
-            list = resize();
+}
+}
+/**
+ * { function_description }
+ *
+ * @param      newArray  The new array
+ */
+//public void add(int []newArray) {
+	//if ((size() + newArray.length) > 10) {
+            //list = resize();
+        //}
+        //int j = 0;
+        //for (int i = size; i < (size + newArray.length); i++) {
+        //list[i] = newArray[j];
+        //j++;
+        //}
+        //size = size + newArray.length;
+    //}
+    public void add(final int[] items) {
+        for (int element : items) {
+           add(element);
         }
-        int j = 0;
-        for (int i = size; i < (size + newArray.length); i++) {
-        list[i] = newArray[j];
-        j++;
-        }
-        size = size + newArray.length;
     }
     private int[] resize() {
      return Arrays.copyOf(list, 2 * list.length);
@@ -93,10 +115,12 @@ public void add(int []newArray) {
  		Set result = new Set();
  	int j = 0;
  	for (int i = 0; i < size; i++) {
- 		if(list[i]!=anotherArray[j]) {
+        for (j=0;j<anotherArray.length;j++){
+ 		if(list[i]==anotherArray[j]) {
  			result.add(anotherArray[j]);
  			j++;
  		}
+    }
  	}
  	return result;
  }
