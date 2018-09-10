@@ -126,18 +126,18 @@ public void add(int item) {
  }
 
 public int[][] cartesianProduct(Set anotherSet) {
-	int [][] result = new int[size][anotherSet.size()];
-	String str1 = "[";
-	int i=0;
-	for (i=0; i<size; i++) {
-		String tempString="";
-		for (int j=0; j<anotherSet.size();j++) {
-			tempString="[";
-			tempString=tempString+list[i]+", "+anotherSet.get(j)+"]";
-		}
-		str1=str1+tempString+"]";
-	}
-	return result;
+	int row = this.size() * anotherSet.size();
+        int col = 2;
+        int[][] product = new int[row][col];
+        int k = 0;
+        for (int i = 0; i < this.size(); i++) {
+            for (int j = 0; j < anotherSet.size(); j++) {
+                product[k][0] = this.get(i);
+                product[k][1] = anotherSet.list[j];
+                k += 1;
+            }
+        }
+        return product;
 }
 }
 
