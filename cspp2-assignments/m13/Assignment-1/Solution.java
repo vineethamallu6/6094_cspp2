@@ -23,9 +23,21 @@ class Set {
        list=new int[capacity];
        size = 0;
     }
+    /**
+     * { function_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     public int size(){
     	return size;
     }
+    /**
+     * { function_description }
+     *
+     * @param      item  The item
+     *
+     * @return     { description_of_the_return_value }
+     */
     public boolean contains(int item){
     	int count=0;
     	for (int i=0; i<size; i++){
@@ -40,6 +52,11 @@ class Set {
 
 
     }
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
     public String toString() {
         if (size == 0) {
             return "{}";
@@ -55,6 +72,11 @@ class Set {
         }
         return str;
      }
+     /**
+      * { function_description }
+      *
+      * @param      item  The item
+      */
 
 public void add(int item) {
     if (size == list.length) {
@@ -81,14 +103,32 @@ public void add(int item) {
         //}
         //size = size + newArray.length;
     //}
+
+/**
+ * { function_description }
+ *
+ * @param      items  The items
+ */
     public void add(final int[] items) {
         for (int element : items) {
            add(element);
         }
     }
+    /**
+     * { function_description }
+     *
+     * @return     { description_of_the_return_value }
+     */
     private int[] resize() {
      return Arrays.copyOf(list, 2 * list.length);
  }
+ /**
+  * { function_description }
+  *
+  * @param      index  The index
+  *
+  * @return     { description_of_the_return_value }
+  */
  	public int get(int index) {
         if (index < 0 || index >= size) {
             return -1;
@@ -96,6 +136,13 @@ public void add(int item) {
             return list[index];
     }
 }
+/**
+ * { function_description }
+ *
+ * @param      otherSet  The other set
+ *
+ * @return     { description_of_the_return_value }
+ */
 
  public Set intersection(Set otherSet) {
  	Set intersection = new Set();
@@ -111,6 +158,13 @@ public void add(int item) {
  	}
  	return intersection;
  }
+ /**
+  * { function_description }
+  *
+  * @param      anotherArray  Another array
+  *
+  * @return     { description_of_the_return_value }
+  */
  	public Set retainAll(int[] anotherArray) {
  		Set result = new Set();
  	int j = 0;
@@ -124,8 +178,15 @@ public void add(int item) {
  	}
  	return result;
  }
-
+/**
+ * { function_description }
+ *
+ * @param      anotherSet  Another set
+ *
+ * @return     { description_of_the_return_value }
+ */
 public int[][] cartesianProduct(Set anotherSet) {
+
 	int row = this.size() * anotherSet.size();
         int col = 2;
         int[][] product = new int[row][col];
