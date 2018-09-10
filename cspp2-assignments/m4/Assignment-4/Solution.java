@@ -17,8 +17,8 @@ Do not modify the main function.
     */
     public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
-        String s = sc.nextLine();
-        String reverse = reverseString(s);
+        String givenString = sc.nextLine();
+        String reverse = reverseString(givenString);
         System.out.println(reverse);
     }
     /**
@@ -27,10 +27,10 @@ Do not modify the main function.
     /**parameters.
     *@param s String
     */
-    public static String reverseString(final String s) {
+    public static String reverseString(final String stringGiven) {
         String rev = "";
-        for (int i = 0; i < s.length(); i++) {
-            rev = s.charAt(i) + rev;
+        for (int i = 0; i < stringGiven.length(); i++) {
+            rev = stringGiven.charAt(i) + rev;
         }
         return rev;
     }
