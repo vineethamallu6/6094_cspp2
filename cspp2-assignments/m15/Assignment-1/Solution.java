@@ -196,7 +196,7 @@ class List extends Exception{
      */
     public boolean contains(int item) {
         // Replace the code below
-        return indexOf(item) != -1;
+        return indexOf(item) >= 0;
     }
     /*
      * Returns the index of the first occurrence of the specified element in
