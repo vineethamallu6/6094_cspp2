@@ -160,13 +160,12 @@ class List extends Exception{
      * items in the list? Would size variable be useful?
      */
     public int get(int index) {
-        if (index < 0 || index >= size) {
+        if (index < 0 && index >= size) {
             return -1;
         } else {
             return list[index];
+        }
     }
-}
-
     /*
      * What happens when you print an object using println? Java provides a
      * method named toString that is internally invoked when an object variable
@@ -238,11 +237,10 @@ class List extends Exception{
             for (int j = 0; j < size; j++){
                 if(newArray[i] == list[j]) {
                     remove(j);
-                    j--;
                 }
             }
         }
-     }
+    }
     /*
     Returns a list object containing elements, including startIndex and
     excluding endIndex. The first parameter indicates the startIndex and the
@@ -275,7 +273,6 @@ class List extends Exception{
         if (start > size || end > size) {
              throw new Exception("Index Out of Bounds Exception");
         }
-
         List result = new List(end-start);
         for(int i = start; i < end; i++) {
             result.add(list[i]);
@@ -308,8 +305,18 @@ class List extends Exception{
         //}
         size = 0;
     }
+    public int count(final int item) {
+         // write the logic
+        int count = 0;
+        for (int i = 0; i < list.length; i++) {
+            if (item == list[i]) {
+                count++;
+            }
+        }
+        return count;
+    }
 }
-    public final class Solution {
+public final class Solution {
     /**
      * Constructs the object.
      */
@@ -328,8 +335,6 @@ class List extends Exception{
                             .mapToInt(Integer::parseInt)
                             .toArray();
     }
-
-
     public static void main(String[] args) {
         // create an object of the list to invoke methods on it
         List l = new List();
@@ -408,20 +413,21 @@ class List extends Exception{
                     System.out.println(e.getMessage());
                 }
                 break;
-                case "subList": {
+                case "subList":
                     try {
-                    if (tokens.length != 2) break;
-                    String[] arrstring3 = tokens[1].split(",");
-                    List object = l.subList(Integer.parseInt(arrstring3[0]),
-                            Integer.parseInt(arrstring3[1]));
-                    if (object != null)
-                        System.out.println(object);
+                        if (tokens.length != 2) {
+                            break;
+                        }
+                        String[] arrstring3 = tokens[1].split(",");
+                        List object = l.subList(Integer.parseInt(arrstring3[0]),
+                                                    Integer.parseInt(arrstring3[1]));
+                        if (object != null) {
+                            System.out.println(object);
+                        }
+                    } catch (Exception e) {
+                        System.out.println(e.getMessage());
+                    }
                     break;
-                }
-                catch (Exception e) {
-                    System.out.println(e.getMessage());
-                }
-                }
                 case "equals":
                     if (tokens.length == 2) {
                         String[] lt = tokens[1].split(",");
@@ -431,10 +437,13 @@ class List extends Exception{
                         }
                         System.out.println(l.equals(l2));
                     }
-                break;
+                    break;
                 case "clear":
                     l.clear();
-                break;
+                    break;
+                case "count":
+                    System.out.println(l.count(Integer.parseInt(tokens[1])));
+                    break;
                 default:
                 break;
             }
