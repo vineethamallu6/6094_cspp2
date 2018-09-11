@@ -122,25 +122,32 @@ class List extends Exception{
      * [1,3,0,0,0,0,0,0,0,0] The method returns void (nothing)
      *
      */
-    public void remove(int index)  {
+    public void remove(int index) throws Exception {
         // write the logic for remove here. Think about what to do to the size
         // variable.
-        try {
-        if (index >=0 && index < size) {
+        // try {
+        //     if (index >=0 && index < size) {
+        //         for (int i = index; i < size - 1; i++) {
+        //             list[i] = list[i+1];
+        //         }
+        //         size--;
+        //     }
+        // }
+        // //     else {
+        // //         throw new Exception("Invalid Position Exception");
+        // //     }
+        // // }
+        // catch (Exception e) {
+        //     System.out.println("Invalid Position Exception");
+        // }
+        if (index < 0 || index >= size) {
+            throw new Exception("Invalid Position Exception");
+        } else {
             for (int i = index; i < size - 1; i++) {
                 list[i] = list[i+1];
             }
             size--;
         }
-            else {
-                throw new Exception("Invalid Position Exception");
-            }
-        }
-        catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
-
-
     }
 
     /*
@@ -226,7 +233,7 @@ class List extends Exception{
      Removes all of its elements that are contained in the specified int
      array.
     */
-     public void removeAll(int[] newArray) {
+     public void removeAll(int[] newArray) throws Exception{
         for (int i = 0; i < newArray.length; i++) {
             for (int j = 0; j < size; j++){
                 if(newArray[i] == list[j]) {
@@ -352,10 +359,14 @@ class List extends Exception{
                     System.out.println(l);
                 break;
                 case "remove":
+                try {
                     if (tokens.length == 2) {
                         l.remove(Integer.parseInt(tokens[1]));
                     }
-                    break;
+                } catch (Exception e) {
+                    System.out.println(e.getMessage());
+                }
+                break;
                 case "indexOf":
                     if (tokens.length == 2) {
                         System.out.println(l.indexOf(
@@ -385,6 +396,7 @@ class List extends Exception{
                     }
                 break;
                 case "removeAll":
+                try {
                     if (tokens.length == 2) {
                         String[] t2 = tokens[1].split(",");
                         int[] a = new int[t2.length];
@@ -392,6 +404,9 @@ class List extends Exception{
                             a[i] = Integer.parseInt(t2[i]);
                         l.removeAll(a);
                     }
+                } catch (Exception e) {
+                    System.out.println(e.getMessage());
+                }
                 break;
                 case "subList": {
                     try {
