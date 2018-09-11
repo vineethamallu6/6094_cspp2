@@ -301,6 +301,27 @@ class List extends Exception{
         //}
         size = 0;
     }
+}
+    public final class Solution {
+    /**
+     * Constructs the object.
+     */
+    private Solution() {
+
+    }
+    public static int[] intArray(final String s) {
+        String input = s;
+        if (input.equals("[]")) {
+            return new int[0];
+        }
+        if (s.contains("[")) {
+            input = s.substring(1, s.length() - 1);
+        }
+        return Arrays.stream(input.split(","))
+                            .mapToInt(Integer::parseInt)
+                            .toArray();
+    }
+
 
     public static void main(String[] args) {
         // create an object of the list to invoke methods on it
