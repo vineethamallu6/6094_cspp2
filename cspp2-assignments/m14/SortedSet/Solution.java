@@ -119,7 +119,7 @@ class SortedSetADT extends Set {
      *
      * @return     { description_of_the_return_value }.
      */
-    public int[] subSet(final int fromElement, final  int toElement) {
+     public int[] subSet(final int fromElement, final  int toElement) {
         int[] temp = new int[x];
         int s = 0;
         for (int i = 0; i < size; i++) {
