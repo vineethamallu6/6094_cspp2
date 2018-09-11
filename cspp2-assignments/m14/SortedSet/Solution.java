@@ -1,0 +1,234 @@
+import java.io.BufferedInputStream;
+import java.util.Scanner;
+import java.util.Arrays;
+class SortedSetADT extends Set {
+    /**
+     * set.
+     */
+    private int[] set;
+    /**
+     * size.
+     */
+    private int size;
+    /**
+     * magicnumber.
+     */
+    private final int x = 10;
+    /**
+     * Constructs the object.
+     */
+    SortedSetADT() {
+        set = new int[x];
+        size = 0;
+    }
+    /**
+     * size.
+     *
+     * @return     int size.
+     */
+    public int size() {
+        return size;
+    }
+    /**
+     * contains.
+     *
+     * @param      item  The item.
+     *
+     * @return     true or false.
+     */
+    public boolean contains(int item){
+    	int count = 0;
+    	for (int i = 0; i < size; i++){
+          if (set[i] == item) {
+          count++;
+          }
+      }
+          if(count > 0){
+          	return true;
+          }
+          return false;
+      }
+    /**
+     * Returns a string representation of the object.
+     *
+     * @return     String representation of the object.
+     */
+    public String toString() {
+        if (size == 0) {
+            return "{}";
+        }
+        String str = "{";
+        int i = 0;
+        for (i = 0; i < size - 1; i++) {
+            str = str + set[i] + ", ";
+        }
+        str = str + set[i] + "}";
+        return str;
+    }
+    /**
+     * add.
+     *
+     * @param      newArray  The new array.
+     */
+    public void addAll(final int[] newArray) {
+        for (int a : newArray) {
+            add(a);
+        }
+        set = Arrays.copyOf(set, size);
+        Arrays.sort(set);
+    }
+    /**
+     * add.
+     *
+     * @param      item  The item.
+     */
+    public void add(final int item) {
+        if (!contains(item)) {
+            if (size == set.length) {
+                resize();
+            }
+            set[size++] = item;
+        }
+    }
+    /**
+     * resize.
+     */
+    public void resize() {
+        int resizefactor = 2;
+        int[] temp = new int[resizefactor * size];
+        for (int i = 0; i < size; i++) {
+            temp[i] = set[i];
+        }
+        set = temp;
+    }
+    /**
+     * get.
+     *
+     * @param      index  The index.
+     *
+     * @return     item.
+     */
+    public int get(final int index) {
+        return set[index];
+    }
+    /**
+     * subset.
+     *
+     * @param      fromElement  The from element.
+     * @param      toElement    To element.
+     *
+     * @return     { description_of_the_return_value }.
+     */
+    public int[] subSet(final int fromElement, final  int toElement) {
+        int[] temp = new int[x];
+        int s = 0;
+        for (int i = 0; i < size; i++) {
+            if (set[i] >= fromElement && set[i] < toElement) {
+                temp[s++] = set[i];
+            }
+        }
+        temp = Arrays.copyOf(temp, s);
+        return temp;
+    }
+    /**
+     * headset.
+     *
+     * @param      toElement  To element.
+     *
+     * @return     { description_of_the_return_value }.
+     */
+    public int[] headSet(final int toElement) {
+        int[] temp = new int[x];
+        int s = 0;
+        for (int i = 0; i < size; i++) {
+            if (set[i] < toElement) {
+                temp[s++] = set[i];
+            }
+        }
+        temp = Arrays.copyOf(temp, s);
+        return temp;
+    }
+    /**
+     * last.
+     *
+     * @return     last value.
+     */
+    public int last() {
+    if (size != 0) {
+        return set[size - 1];
+    }
+    System.out.println("Set Empty Exception");
+    return -1;
+    }
+}
+
+
+public final class Solution {
+    /**
+     * Constructs the object.
+     */
+    private Solution() {
+
+    }
+    /**
+     * helper function to convert string input to int array.
+     *
+     * @param      s     { string input from test case file }
+     *
+     * @return     { int array from the given string }
+     */
+    public static int[] intArray(final String s) {
+        String input = s;
+        if (input.equals("[]")) {
+            return new int[0];
+        }
+        if (s.contains("[")) {
+            input = s.substring(1, s.length() - 1);
+        }
+        return Arrays.stream(input.split(","))
+                            .mapToInt(Integer::parseInt)
+                            .toArray();
+    }
+public static void main(final String[] args) {
+        // instantiate this set
+        SortedSetADT s = new SortedSetADT();
+        // code to read the test cases input file
+        Scanner stdin = new Scanner(new BufferedInputStream(System.in));
+        // check if there is one more line to process
+        while (stdin.hasNext()) {
+            // read the line
+            String line = stdin.nextLine();
+            // split the line using space
+            String[] tokens = line.split(" ");
+            // based on the list operation invoke the corresponding method
+            switch (tokens[0]) {
+            case "print":
+                System.out.println(s);
+                break;
+            case "add":
+                int[] intArray = intArray(tokens[1]);
+                s.add(intArray[0]);
+                break;
+            case "addAll":
+                intArray = intArray(tokens[1]);
+                s.addAll(intArray);
+                break;
+            case "subSet":
+                intArray = intArray(tokens[1]);
+                int[] t = s.subSet(intArray[0],intArray[1]);
+                if (t != null) {
+                System.out.println(Arrays.toString(t).replace("[","{").replace("]","}"));
+                }
+                break;
+            case "headSet":
+                intArray = intArray(tokens[1]);
+                System.out.println(Arrays.toString(s.headSet(intArray[0])).replace("[","{").replace("]","}"));
+                break;
+            case "last":
+                System.out.println(s.last());
+            default:
+                break;
+            }
+        }
+    }
+}
