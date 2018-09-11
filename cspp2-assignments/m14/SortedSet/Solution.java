@@ -1,168 +1,109 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
-class SortedSetADT extends Set {
+/**
+ * Class for sorted set.
+ */
+class SortedSet extends Set {
     /**
-     * set.
-     */
-    private int[] set;
-    /**
-     * size.
-     */
-    private int size;
-    /**
-     * magicnumber.
-     */
-    private final int x = 10;
-    /**
-     * Constructs the object.
-     */
-    SortedSetADT() {
-        set = new int[x];
-        size = 0;
-    }
-    /**
-     * size.
+     * sort function.
      *
-     * @return     int size.
+     * @param      array  The array
      */
-    public int size() {
-        return size;
-    }
-    /**
-     * contains.
-     *
-     * @param      item  The item.
-     *
-     * @return     true or false.
-     */
-    public boolean contains(int item){
-    	int count = 0;
-    	for (int i = 0; i < size; i++){
-          if (set[i] == item) {
-          count++;
-          }
-      }
-          if(count > 0){
-          	return true;
-          }
-          return false;
-      }
-    /**
-     * Returns a string representation of the object.
-     *
-     * @return     String representation of the object.
-     */
-    public String toString() {
-        if (size == 0) {
-            return "{}";
+    public void sort(final int[] array) {
+        int temp;
+        for (int i = 0; i < size; i++) {
+            for (int j = i + 1; j < size; j++) {
+                if (array[i] > array[j]) {
+                    temp = array[i];
+                    array[i] = array[j];
+                    array[j] = temp;
+                }
+            }
         }
-        String str = "{";
-        int i = 0;
-        for (i = 0; i < size - 1; i++) {
-            str = str + set[i] + ", ";
-        }
-        str = str + set[i] + "}";
-        return str;
     }
     /**
-     * add.
+     * add function.
      *
-     * @param      newArray  The new array.
-     */
-    public void addAll(final int[] newArray) {
-        for (int a : newArray) {
-            add(a);
-        }
-        set = Arrays.copyOf(set, size);
-        Arrays.sort(set);
-    }
-    /**
-     * add.
-     *
-     * @param      item  The item.
+     * @param      item  The item
      */
     public void add(final int item) {
         if (!contains(item)) {
-            if (size == set.length) {
-                resize();
-            }
             set[size++] = item;
         }
-    }
-    /**
-     * resize.
-     */
-    public void resize() {
-        int resizefactor = 2;
-        int[] temp = new int[resizefactor * size];
-        for (int i = 0; i < size; i++) {
-            temp[i] = set[i];
-        }
-        set = temp;
-    }
-    /**
-     * get.
-     *
-     * @param      index  The index.
-     *
-     * @return     item.
-     */
-    public int get(final int index) {
-        return set[index];
+        sort(set);
     }
     /**
      * subset.
      *
-     * @param      fromElement  The from element.
-     * @param      toElement    To element.
+     * @param      start  The start
+     * @param      end    The end
      *
-     * @return     { description_of_the_return_value }.
+     * @return     from start to end returns elements.
      */
-     public int[] subSet(final int fromElement, final  int toElement) {
-        int[] temp = new int[x];
-        int s = 0;
+    public int[] subSet(final int start, final int end) {
+        if (start > end) {
+            System.out.println("Invalid Arguments to Subset Exception");
+            return null;
+        }
+        int[] result = new int[size];
+        int k = 0;
         for (int i = 0; i < size; i++) {
-            if (set[i] >= fromElement && set[i] < toElement) {
-                temp[s++] = set[i];
+            if (set[i] >= start) {
+                for (int j = i; j < size; j++) {
+                    if (set[j] < end) {
+                        result[k++] = set[i];
+                    }
+                    break;
+                }
             }
         }
-        temp = Arrays.copyOf(temp, s);
-        return temp;
+        return Arrays.copyOf(result, k);
     }
     /**
-     * headset.
+     * headset function.
      *
-     * @param      toElement  To element.
+     * @param      end   The end
      *
-     * @return     { description_of_the_return_value }.
+     * @return     returms elements.
      */
-    public int[] headSet(final int toElement) {
-        int[] temp = new int[x];
-        int s = 0;
+    public int[] headSet(final int end) {
+        int[] result = new int[size];
+        int temp = 0;
         for (int i = 0; i < size; i++) {
-            if (set[i] < toElement) {
-                temp[s++] = set[i];
+            if (set[i] < end) {
+                result[i] = set[i];
+                temp++;
             }
         }
-        temp = Arrays.copyOf(temp, s);
-        return temp;
+        return Arrays.copyOf(result, temp);
     }
     /**
-     * last.
+     * last function.
      *
-     * @return     last value.
+     * @return     returns list of elements.
      */
     public int last() {
-    if (size != 0) {
+        if (size == 0) {
+            System.out.println("Set Empty Exception");
+            return -1;
+        }
         return set[size - 1];
     }
-    System.out.println("Set Empty Exception");
-    return -1;
+    /**
+     * Adds all.
+     *
+     * @param      element  The element
+     */
+    public void addAll(final int[] element) {
+        for (int i : element) {
+            this.add(i);
+        }
     }
 }
-
-
+/**
+ * Solution class.
+ */
 public final class Solution {
     /**
      * Constructs the object.
@@ -186,12 +127,17 @@ public final class Solution {
             input = s.substring(1, s.length() - 1);
         }
         return Arrays.stream(input.split(","))
-                            .mapToInt(Integer::parseInt)
-                            .toArray();
+               .mapToInt(Integer::parseInt)
+               .toArray();
     }
-public static void main(final String[] args) {
+    /**
+     * main function to execute test cases.
+     *
+     * @param      args  The arguments
+     */
+    public static void main(final String[] args) {
         // instantiate this set
-        SortedSetADT s = new SortedSetADT();
+        SortedSet s = new SortedSet();
         // code to read the test cases input file
         Scanner stdin = new Scanner(new BufferedInputStream(System.in));
         // check if there is one more line to process
@@ -206,13 +152,12 @@ public static void main(final String[] args) {
                 System.out.println(s.size());
                 break;
             case "contains":
-                System.out.println(s.
-                    contains(Integer.parseInt(tokens[1])));
+                System.out.println(s.contains(Integer.parseInt(tokens[1])));
                 break;
             case "print":
                 System.out.println(s);
                 break;
-            case "addAll":
+            case "add":
                 int[] intArray = intArray(tokens[1]);
                 if (intArray.length == 1) {
                     s.add(intArray[0]);
@@ -220,31 +165,67 @@ public static void main(final String[] args) {
                     s.add(intArray);
                 }
                 break;
+            case "intersection":
+                s = new SortedSet();
+                Set t = new Set();
+                intArray = intArray(tokens[1]);
+                s.add(intArray);
+                intArray = intArray(tokens[2]);
+                t.add(intArray);
+                System.out.println(s.intersection(t));
+                break;
+            case "retainAll":
+                s = new SortedSet();
+                intArray = intArray(tokens[1]);
+                s.add(intArray);
+                intArray = intArray(tokens[2]);
+                System.out.println(s.retainAll(intArray));
+                break;
+            case "cartesianProduct":
+                s = new SortedSet();
+                t = new Set();
+                intArray = intArray(tokens[1]);
+                s.add(intArray);
+                intArray = intArray(tokens[2]);
+                t.add(intArray);
+                System.out.println(Arrays.deepToString(s.cartesianProduct(t)));
+                break;
             case "subSet":
-                String[] arrstring = tokens[1].split(",");
-                if (Integer.parseInt(arrstring[0])
-                      > Integer.parseInt(arrstring[1])) {
-                    System.out.println("Invalid Arguments to Subset Exception");
-                } else {
-                    int[] subarray = s.subSet(Integer.parseInt(arrstring[0]),
-                            Integer.parseInt(arrstring[1]));
-                    Set subset = new Set();
-                    subset.add(subarray);
-                    if (subset != null) {
-                        System.out.println(subset);
-                    }
+                if (tokens.length != 2) {
+                    break;
+                }
+                String[] arrstring3 = tokens[1].split(",");
+                int[] object = s.subSet(Integer.parseInt(arrstring3[0]),
+                                        Integer.parseInt(arrstring3[1]));
+                if (object != null) {
+                    System.out.println(Arrays.toString(object).replace("[",
+                        "{").replace("]", "}"));
                 }
                 break;
             case "headSet":
-                int[] headarray = s.headSet(Integer.parseInt(tokens[1]));
-                Set headset = new Set();
-                headset.add(headarray);
-                if (headset != null) {
-                    System.out.println(headset);
+                if (tokens.length != 2) {
+                    break;
+                }
+                int[] obj = s.headSet(Integer.parseInt(tokens[1]));
+                if (obj != null) {
+                    System.out.println(Arrays.toString(obj).replace("[",
+                        "{").replace("]", "}"));
                 }
                 break;
             case "last":
-                System.out.println(s.last());
+                if (tokens.length != 1) {
+                    break;
+                }
+                int temp = s.last();
+                System.out.println(temp);
+                break;
+            case "addAll":
+                int[] intArr = intArray(tokens[1]);
+                if (intArr.length == 1) {
+                    s.add(intArr[0]);
+                } else {
+                    s.add(intArr);
+                }
                 break;
             default:
                 break;
@@ -252,3 +233,8 @@ public static void main(final String[] args) {
         }
     }
 }
+
+
+
+
+

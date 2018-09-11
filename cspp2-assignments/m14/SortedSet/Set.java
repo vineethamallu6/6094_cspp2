@@ -12,12 +12,12 @@ public class Set {
     /**
      * holds the elemtns in this Set array.
      */
-    private int[] set;
+    public int[] set;
 
     /**
      * indicates the number of elememnts of this set.
      */
-    private int size;
+    public int size;
 
     /**
      * Default constructor to create an array with the szie 10.
@@ -59,18 +59,7 @@ public class Set {
             add(arr[i]);
         }
     }
-    public void add(final int index, final int item) {
-         // write the logic
-        if (index < 0) {
-            System.out.println("Negative Index Exception");
-        } else {
-            for (int i = size; i > index; i--) {
-                set[i] = set[i - 1];
-            }
-        set[index] = item;
-        size++;
-        }
-    }
+
     /**
      * Finds the intersection of the two sets.
      * @param  other as set 2.
