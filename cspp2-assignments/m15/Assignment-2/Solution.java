@@ -4,7 +4,7 @@ import java.util.Arrays;
 /**
  * Class for sorted set.
  */
-class SortedSet {
+class SortedSet extends Set{
     public int[] set;
 
     /**
