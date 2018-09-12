@@ -148,8 +148,7 @@ class SortedSet extends SetSolution {
         return subSet(set[0], toElement);
     }
     /**
-     * method to return the last element in the set.
-     * @return returns the last element in the set.
+     * method to give the last element.
      */
     public void last() {
         try{
