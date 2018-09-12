@@ -291,7 +291,7 @@ public final class Solution {
                 try {
                 if (Integer.parseInt(arrstring[0])
                       > Integer.parseInt(arrstring[1])) {
-                    throw new Exception("Invalid Arguments to Subset Exception");
+                throw new Exception("Invalid Arguments to Subset Exception");
                 } else {
                     int[] subarray = s.subSet(Integer.parseInt(arrstring[0]),
                             Integer.parseInt(arrstring[1]));
@@ -312,7 +312,7 @@ public final class Solution {
                     if (Integer.parseInt(tokens[1]) <= s.get(0)) {
                         throw new Exception("Set Empty Exception");
                     } else {
-                        int[] headarray = s.headSet(Integer.parseInt(tokens[1]));
+                    int[] headarray = s.headSet(Integer.parseInt(tokens[1]));
                         SortedSet headset = new SortedSet();
                         headset.addAll(headarray);
                         if (headset != null) {
