@@ -154,7 +154,7 @@ class SortedSet extends SetSolution {
         try {
         if (size != 0) {
             System.out.println(set[size - 1]);
-        } else{
+        } else {
             throw new Exception("Set Empty Exception");
         }
     } catch (Exception e) {
@@ -206,7 +206,7 @@ class SortedSet extends SetSolution {
 /**
  * Solution class for code-eval.
  */
-public class Solution {
+public final class Solution {
     /**
      * Constructor for the solution class.
      */
@@ -288,7 +288,7 @@ public class Solution {
                 break;
             case "subSet":
                 String[] arrstring = tokens[1].split(",");
-                try{
+                try {
                 if (Integer.parseInt(arrstring[0])
                       > Integer.parseInt(arrstring[1])) {
                     throw new Exception("Invalid Arguments to Subset Exception");
@@ -301,7 +301,7 @@ public class Solution {
                         System.out.println(subset);
                     }
                 }
-            } catch(Exception e) {
+            } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
 
@@ -319,7 +319,7 @@ public class Solution {
                         System.out.println(headset);
                         }
                     }
-                    } catch(Exception e) {
+                    } catch (Exception e) {
                         System.out.println(e.getMessage());
                     }
                 break;
