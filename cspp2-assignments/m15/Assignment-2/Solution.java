@@ -226,11 +226,11 @@ public final class Solution {
                 break;
             case "intersection":
                 s = new SortedSet();
-                SortedSet t = new SortedSet();
+                Set t = new Set();
                 intArray = intArray(tokens[1]);
                 s.addAll(intArray);
                 intArray = intArray(tokens[2]);
-                t.addAll(intArray);
+                t.add(intArray);
                 System.out.println(s.intersection(t));
                 break;
             case "retainAll":
