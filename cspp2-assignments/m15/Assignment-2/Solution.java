@@ -151,7 +151,7 @@ class SortedSet extends SetSolution {
      * method to give the last element.
      */
     public void last() {
-        try{
+        try {
         if (size != 0) {
             System.out.println(set[size - 1]);
         } else{
