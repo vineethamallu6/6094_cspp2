@@ -5,19 +5,19 @@ import java.util.Arrays;
  * Class for set.
  * @author : Vineetha.
  */
-class SortedSet extends SetSolution{
+class SortedSet extends SetSolution {
     /**
      * integer array named set.
      */
-    public int[] set;
+    private int[] set;
     /**
      * integer variable named size.
      */
-    public int size;
+    private int size;
     /**
      * variable with value 10.
      */
-    public final int variable = 10;
+    private final int variable = 10;
     /**
      * Constructor for the object "Sortedset".
      */
