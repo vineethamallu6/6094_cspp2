@@ -159,6 +159,9 @@ class SortedSet extends Set{
             this.add(i);
         }
     }
+    private void resize() {
+        set = java.util.Arrays.copyOf(set, size * 2);
+    }
 }
 /**
  * Solution class.
