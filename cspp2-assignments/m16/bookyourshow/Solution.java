@@ -121,11 +121,17 @@ class BookYourShow {
      * bookedTickets.
      */
     private List<String> bookedTickets;
+    /**
+     * Constructs the object.
+     */
     BookYourShow() {
     /**
     * BookYourShow.
     */
         showDetails = new List<Show>();
+        /**
+         * showDetails
+         */
         bookedTickets = new List<String>();
     }
     public void addAShow(final Show obj) {
