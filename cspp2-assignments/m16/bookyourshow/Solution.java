@@ -12,12 +12,12 @@ class Show {
 	 * Constructor for the class show.
 	 *
 	 * @param      m  moviename.
-	 * @param      dt date and time.
+	 * @param      d date and time.
 	 * @param      s  seats string.
 	 */
-	Show(String m, String dt, String[] s) {
+	Show(String m, String d, String[] s) {
 		this.nameOfTheMovie = m;
-		this.dateAndTime = dt;
+		this.dateAndTime = d;
 		this.seatNumbers = s;
 	}
 	/**
