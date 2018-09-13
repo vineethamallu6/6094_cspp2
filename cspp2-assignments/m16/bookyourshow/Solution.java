@@ -4,18 +4,18 @@ import java.util.Arrays;
  * Class for show.
  */
 class Show {
-    private String nameOfTheMovie;
     /**
-     * nameOfMovie.
+     * nameOfTheMovie.
      */
-    private String dateAndTime;
+    private String nameOfTheMovie;
     /**
      * dateAndTime.
      */
-    private String[] seatNumbers;
+    private String dateAndTime;
     /**
      * seatNumbers.
      */
+    private String[] seatNumbers;
     /**
      * Constructor for the class show.
      *
