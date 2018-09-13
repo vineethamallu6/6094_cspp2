@@ -134,16 +134,23 @@ class BookYourShow {
          */
         bookedTickets = new List<String>();
     }
+    /**
+     * Adds a show.
+     *
+     * @param      obj   The object
+     */
     public void addAShow(final Show obj) {
-        /**
-         * addAShow.
-         */
         showDetails.add(obj);
     }
+    /**
+     * Gets a show.
+     *
+     * @param      movieName    The movie name
+     * @param      dateAndTime  The date and time
+     *
+     * @return     A show.
+     */
     public Show getAShow(final String movieName, final String dateAndTime) {
-        /**
-         * getAShow to get movie details.
-         */
         for (int i = 0; i < showDetails.size(); i++) {
         if (showDetails.get(i).getMovieName().equals(movieName)
             && showDetails.get(i).getDateAndTime().equals(dateAndTime)) {
@@ -152,10 +159,15 @@ class BookYourShow {
         }
         return null;
     }
+    /**
+     * method to book a show.
+     *
+     * @param      movieName    The movie name
+     * @param      dateAndTime  The date and time
+     * @param      obj          The object
+     * @param      seats        The seats
+     */
     public void bookAShow(final String movieName, final String dateAndTime, final Patron obj, final String[] seats) {
-        /**
-         * bookAShow to book a movie.
-         */
         Show movieData = getAShow(movieName, dateAndTime);
         if (movieData != null) {
             for (int i = 0; i < movieData.getSeatNumbers().length; i++) {
@@ -170,10 +182,14 @@ class BookYourShow {
             System.out.println("No show");
         }
     }
+    /**
+     * Print tickets.
+     *
+     * @param      movieName     The movie name
+     * @param      dateAndTime   The date and time
+     * @param      mobileNumber  The mobile number
+     */
     public void printTickets(final String movieName, final String dateAndTime, final String mobileNumber) {
-        /**
-         * printTickets to print details.
-         */
         for (int i = 0; i < bookedTickets.size(); i++) {
             if ((mobileNumber + " " + movieName + " " + dateAndTime).equals(bookedTickets.get(i))) {
                 System.out.println(mobileNumber + " " + movieName + " " + dateAndTime);
@@ -183,10 +199,10 @@ class BookYourShow {
         System.out.println("Invalid");
         return;
     }
+    /**
+     * Shows all.
+     */
     public void showAll() {
-        /**
-         * showAll to show all details.
-         */
         for (int i = 0; i < showDetails.size(); i++) {
 
             System.out.println(showDetails.get(i).toString() + "," +
