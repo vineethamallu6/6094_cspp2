@@ -218,7 +218,7 @@ class BookYourShow {
 /**
  * Class for solution.
  */
-class Solution {
+public class Solution {
     /**
      * Constructs the object.
      */
