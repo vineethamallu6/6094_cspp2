@@ -213,15 +213,15 @@ class BookYourShow {
 
 public class Solution {
     /**
-     * main method for class solution.
-     *
-     * @param args  The arguments.
+     * Constructs the object.
      */
     public Solution() {
-        /**
-         * constructor.
-         */
     }
+    /**
+     * main method.
+     *
+     * @param      args  The arguments
+     */
    public  static void main(final String[] args) {
         BookYourShow bys = new BookYourShow();
         Scanner scan = new Scanner(System.in);
