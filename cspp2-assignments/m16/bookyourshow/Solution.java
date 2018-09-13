@@ -116,15 +116,15 @@ class BookYourShow {
     /**
      * showDetails.
      */
-    List<Show> showDetails;
+    private List<Show> showDetails;
     /**
      * bookedTickets.
      */
-    List<String> bookedTickets;
-    public BookYourShow() {
-        /**
-         * BookYourShow.
-         */
+    private List<String> bookedTickets;
+    BookYourShow() {
+    /**
+    * BookYourShow.
+    */
         showDetails = new List<Show>();
         bookedTickets = new List<String>();
     }
