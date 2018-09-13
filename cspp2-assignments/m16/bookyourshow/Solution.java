@@ -113,7 +113,13 @@ class Patron {
  * Class for book your show.
  */
 class BookYourShow {
+    /**
+     * showDetails.
+     */
     List<Show> showDetails;
+    /**
+     * bookedTickets.
+     */
     List<String> bookedTickets;
     public BookYourShow() {
         /**
