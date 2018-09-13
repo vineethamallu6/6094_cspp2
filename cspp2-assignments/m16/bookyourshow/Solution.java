@@ -216,7 +216,7 @@ class Solution {
     /**
      * Constructs the object.
      */
-    public Solution() {
+    Solution() {
     }
     /**
      * main method.
