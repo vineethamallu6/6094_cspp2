@@ -194,8 +194,10 @@ class BookYourShow {
     public void printTickets(final String movieName,
         final String dateAndTime, final String mobileNumber) {
         for (int i = 0; i < bookedTickets.size(); i++) {
-            if ((mobileNumber + " " + movieName + " " + dateAndTime).equals(bookedTickets.get(i))) {
-                System.out.println(mobileNumber + " " + movieName + " " + dateAndTime);
+            if ((mobileNumber + " " + movieName + " " + dateAndTime)
+                .equals(bookedTickets.get(i))) {
+                System.out.println(mobileNumber + " " + movieName + " "
+                + dateAndTime);
                 return;
             }
         }
