@@ -109,13 +109,16 @@ class Patron {
         return this.mobileNumber;
     }
 }
-
-
+/**
+ * Class for book your show.
+ */
 class BookYourShow {
     List<Show> showDetails;
     List<String> bookedTickets;
     public BookYourShow() {
-        //constructor
+        /**
+         * BookYourShow.
+         */
         showDetails = new List<Show>();
         bookedTickets = new List<String>();
     }
