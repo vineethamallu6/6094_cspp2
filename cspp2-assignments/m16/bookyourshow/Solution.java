@@ -175,8 +175,8 @@ class BookYourShow {
                 for (int j = 0; j < seats.length; j++) {
                     if (seats[j].equals(movieData.getSeatNumbers()[i])) {
                         movieData.setSeat(i, "N/A");
-                        bookedTickets.add(obj.getMobileNumber() + " " +
-                        movieName + " " + dateAndTime);
+                        bookedTickets.add(obj.getMobileNumber() + " "
+                            + movieName + " " + dateAndTime);
                     }
                 }
             }
@@ -210,7 +210,8 @@ class BookYourShow {
     public void showAll() {
         for (int i = 0; i < showDetails.size(); i++) {
             System.out.println(showDetails.get(i).toString() + ","
-            + Arrays.toString(showDetails.get(i).getSeatNumbers()).replace(" ",""));
+            + Arrays.toString(showDetails.get(i).getSeatNumbers())
+            .replace(" ",""));
         }
     }
 }
