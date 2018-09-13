@@ -1,4 +1,3 @@
-import java.io.BufferedInputStream;
 import java.util.Scanner;
 import java.util.Arrays;
 /**
@@ -6,8 +5,17 @@ import java.util.Arrays;
  */
 class Show {
     private String nameOfTheMovie;
+    /**
+     * nameOfMovie.
+     */
     private String dateAndTime;
+    /**
+     * dateAndTime.
+     */
     private String[] seatNumbers;
+    /**
+     * seatNumbers.
+     */
     /**
      * Constructor for the class show.
      *
@@ -62,7 +70,9 @@ class Show {
         return this.nameOfTheMovie + "," + this.dateAndTime;
     }
 }
-
+/**
+ * Class for patron.
+ */
 class Patron {
     /**
      * username variable.
@@ -82,9 +92,19 @@ class Patron {
         this.patronName = n;
         this.mobileNumber = mbnum;
     }
+    /**
+     * Gets the name.
+     *
+     * @return     The name.
+     */
     public String getName() {
         return this.patronName;
     }
+    /**
+     * Gets the mobile number.
+     *
+     * @return     The mobile number.
+     */
     public String getMobileNumber() {
         return this.mobileNumber;
     }
