@@ -136,7 +136,7 @@ class BookYourShow {
          * getAShow to get movie details.
          */
         for (int i = 0; i < showDetails.size(); i++) {
-            if (showDetails.get(i).getMovieName().equals(movieName) &&
+        if (showDetails.get(i).getMovieName().equals(movieName) &&
                 showDetails.get(i).getDateAndTime().equals(dateAndTime)) {
                 return showDetails.get(i);
             }
