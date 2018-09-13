@@ -210,7 +210,9 @@ class BookYourShow {
         }
     }
 }
-
+/**
+ * Class for solution.
+ */
 public class Solution {
     /**
      * Constructs the object.
