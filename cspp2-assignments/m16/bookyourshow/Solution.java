@@ -132,6 +132,9 @@ class BookYourShow {
         showDetails.add(obj);
     }
     public Show getAShow(final String movieName, final String dateAndTime) {
+        /**
+         * getAShow to get movie details.
+         */
         for (int i = 0; i < showDetails.size(); i++) {
             if (showDetails.get(i).getMovieName().equals(movieName)&&
                 showDetails.get(i).getDateAndTime().equals(dateAndTime)) {
@@ -141,6 +144,9 @@ class BookYourShow {
         return null;
     }
     public void bookAShow(final String movieName, final String dateAndTime, final Patron obj, final String[] seats) {
+        /**
+         * bookAShow to book a movie.
+         */
         Show movieData = getAShow(movieName, dateAndTime);
         if (movieData != null) {
             for (int i = 0; i < movieData.getSeatNumbers().length; i++) {
@@ -156,7 +162,9 @@ class BookYourShow {
         }
     }
     public void printTickets(final String movieName, final String dateAndTime, final String mobileNumber) {
-        //print the tickets
+        /**
+         * printTickets to print details.
+         */
         for (int i = 0; i < bookedTickets.size(); i++) {
             if ((mobileNumber + " " + movieName + " " + dateAndTime).equals(bookedTickets.get(i))) {
                 System.out.println(mobileNumber + " " + movieName + " " + dateAndTime);
@@ -167,7 +175,9 @@ class BookYourShow {
         return;
     }
     public void showAll() {
-        //print all the available shows
+        /**
+         * showAll to show all details.
+         */
         for (int i = 0; i < showDetails.size(); i++) {
 
             System.out.println(showDetails.get(i).toString() + "," +
@@ -182,6 +192,11 @@ public class Solution {
      *
      * @param args  The arguments.
      */
+    public Solution() {
+        /**
+         * constructor.
+         */
+    }
    public  static void main(final String[] args) {
         BookYourShow bys = new BookYourShow();
         Scanner scan = new Scanner(System.in);
