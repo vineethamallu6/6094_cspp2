@@ -71,6 +71,11 @@ class Item {
 	public String toString() {
 		return this.getItemName() + " " + this.getItemQuantity() + " " + this.getItemPrice();
 	}
+	@Override
+    public boolean equals(final Object item) {
+        Item myItem = (Item)item;
+        return this.getItemName().equals(myItem.getItemName());
+    }
 
 }
 /**
