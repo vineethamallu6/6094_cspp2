@@ -61,7 +61,7 @@ class Item {
 	 * @param      set   The set
 	 */
 	public void  setQuantity(final int set) {
-		this.itemQuantity -= set;
+		this.itemQuantity = set;
 	}
 	/**
 	 * Returns a string representation of the object.
