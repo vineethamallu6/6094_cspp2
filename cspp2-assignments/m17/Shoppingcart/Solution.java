@@ -4,15 +4,15 @@ import java.util.Scanner;
  */
 class Item {
 	/**
-	 * { var_description }
+	 * itemName.
 	 */
 	private String itemName;
 	/**
-	 * { var_description }
+	 * itemQuantity.
 	 */
 	private int itemQuantity;
 	/**
-	 * { var_description }
+	 * itemPrice.
 	 */
 	private float itemPrice;
 	/**
@@ -23,13 +23,12 @@ class Item {
 	 * @param      p     { parameter_description }
 	 */
 
-	public Item(String i, int q,float p) {
+	public Item(final String i, final int q,final float p) {
 		this.itemName = i;
 		this.itemQuantity = q;
 		this.itemPrice = p;
 	}
-
-		/**
+	/**
 	 * Gets the item name.
 	 *
 	 * @return     The item name.
