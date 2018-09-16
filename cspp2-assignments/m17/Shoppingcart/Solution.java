@@ -61,6 +61,9 @@ class Item {
     public void  setQuantity(final int set) {
         this.itemQuantity = set;
     }
+    public float setItemPrice(final float price) {
+        return this.itemPrice = price;
+    }
     /**
      * Returns a string representation of the object.
      *
@@ -77,11 +80,7 @@ class Item {
      *
      * @return     boolean.
      */
-    @Override
-    public boolean equals(final Object item) {
-        Item myItem = (Item)item;
-        return this.getItemName().equals(myItem.getItemName());
-    }
+
 
 }
 /**
@@ -180,8 +179,11 @@ class ShoppingCart {
     public float getTotalAmount() {
         float totalAmount = 0.0f;
         for (int i = 0; i < cartDetails.size(); i++) {
-            Item item = cartDetails.get(i);
-            totalAmount = totalAmount + item.getItemQuantity() * item.getItemPrice();
+            for (int j = 0; j < catalogDetails.size(); j++) {
+                if (cartDetails.get(i).getItemName().equals(catalogDetails.get(j).getItemName())) {
+                    totalAmount += cartDetails.get(i).getItemQuantity() * catalogDetails.get(j).getItemPrice();
+                }
+            }
         }
         return totalAmount;
     }
