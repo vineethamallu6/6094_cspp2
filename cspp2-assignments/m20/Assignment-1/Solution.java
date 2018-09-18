@@ -8,7 +8,7 @@ class Question {
    */
   private String questiontext;
   /**
-   * cjhoices for the question.
+   * choices for the question.
    */
   private String[] choices;
   /**
@@ -51,7 +51,7 @@ class Question {
     this.penalty = penalty1;
   }
   /**
-   * evaluates the responce
+   * evaluates the responce.
    *
    * @param   choice The choice
    *
@@ -117,7 +117,7 @@ class Question {
     return this.response;
   }
   /**
-   * Returns a string representation of the object
+   * Returns a string representation of the object.
    *
    * @return   String representation of the object.
    */
