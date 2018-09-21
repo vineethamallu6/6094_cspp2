@@ -59,8 +59,8 @@ class Text {
 			secondSum += Math.pow(list2.get(inList2),2);
 		}
 		denominator = Math.sqrt(firstSum) * Math.sqrt(secondSum);
-		double result = (numerator / denominator) * 100;
-		return (int) (((result) * 100D)/100D);
+		double result = ((numerator / denominator) * 100D)/100D;
+		return (int) (result * 100);
 	}
 }
 
