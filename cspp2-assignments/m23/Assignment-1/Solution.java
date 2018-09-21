@@ -27,7 +27,7 @@ class Text {
 	}
 	public static Map removableWords(String text) {
 		text = text.toLowerCase();
-		String[] tokens = text.replaceAll("[^A-Za-z ]","").split(" ");
+		String[] tokens = text.replaceAll("[^A-Za-z \\s]","").split(" ");
 		Map <String, Integer> map = new HashMap<>();
 		for (int i = 0; i<tokens.length; i++) {
 			if(!map.containsKey(tokens[i])) {
@@ -41,10 +41,11 @@ class Text {
 	public static int compareWords(String s1, String s2) {
 		float numerator = 0;
 		double denominator = 0;
-		float firstSum = 0;
-		float secondSum = 0;
-		Map <String, Integer> list1 = new HashMap<>();
-		Map <String, Integer> list2= new HashMap<>();
+		double firstSum = 0;
+		double secondSum = 0;
+
+		Map <String, Integer> list1 = removableWords(s1);
+		Map <String, Integer> list2= removableWords(s2);
 		for (String element : list1.keySet()) {
 			for (String item :list2.keySet()) {
 				if (element.equals(item)) {
@@ -88,7 +89,7 @@ class Solution {
 		File folder = new File(readFile);
 		File[] listOfFiles = folder.listFiles();
 		for (File f : listOfFiles) {
-
+			System.out.println(f);
 		}
 		int length = listOfFiles.length;
 		int[][] matrix = new int[length][length];
