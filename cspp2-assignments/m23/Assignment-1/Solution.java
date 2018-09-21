@@ -52,14 +52,18 @@ class Text {
 				}
 			}
 		}
+		System.out.println(numerator);
 		for (String inList1 : list1.keySet()) {
 			firstSum += Math.pow(list1.get(inList1),2);
 		}
 		for (String inList2 : list2.keySet()) {
 			secondSum += Math.pow(list2.get(inList2),2);
 		}
+		System.out.println(firstSum);
+		System.out.println(secondSum);
 		denominator = Math.sqrt(firstSum) * Math.sqrt(secondSum);
 		double result = ((numerator / denominator) * 100D)/100D;
+		System.out.println(result);
 		return (int) (result * 100);
 	}
 }
