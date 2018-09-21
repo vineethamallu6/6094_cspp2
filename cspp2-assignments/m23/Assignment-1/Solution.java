@@ -3,11 +3,8 @@ import java.util.*;
 import java.io.*;
 import java.lang.Math;
 class Text {
-	private String text1;
-	private String text2;
-	public Text(String t1, String t2) {
-		this.text1 = t1;
-		this.text2 = t2;
+
+	public Text() {
 	}
 	public static String TextToString(File text) {
 		String str = "";
@@ -67,6 +64,18 @@ class Text {
 		//System.out.println(result);
 		return (int) (result * 100);
 	}
+	// public static void stringMatching(String file1, String file2) {
+	// 	file1 = file1.toLowerCase();
+	// 	String[] tokens = file1.replaceAll("[^A-Za-z \\s]","").split(" ");
+	// 	file2 = file2.toLowerCase();
+	// 	String[] check = file2.replaceAll("[^A-Za-z \\s]","").split(" ");
+	// 	for (int i = 0; i<tokens.length; i++) {
+	// 		String
+
+	// 	}
+
+
+	// }
 }
 
 class Solution {
@@ -110,6 +119,7 @@ class Solution {
 	} catch (NoSuchElementException e) {
 		System.out.println("empty directory");
 	}
+
 
 	}
 }
