@@ -64,7 +64,7 @@ class Text {
 		//System.out.println(secondSum);
 		denominator = Math.sqrt(firstSum) * Math.sqrt(secondSum);
 		double result = ((numerator / denominator) * 100D)/100D;
-		System.out.println(result);
+		//System.out.println(result);
 		return (int) (result * 100);
 	}
 }
