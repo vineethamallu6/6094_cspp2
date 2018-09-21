@@ -60,7 +60,7 @@ class Text {
 		}
 		denominator = Math.sqrt(firstSum) * Math.sqrt(secondSum);
 		double result = (numerator / denominator) * 100;
-		return (int) ((result * 100D/100D));
+		return (int) ((result) * 100D/100D);
 	}
 }
 
