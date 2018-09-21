@@ -88,9 +88,6 @@ class Solution {
 		readFile = s.nextLine();
 		File folder = new File(readFile);
 		File[] listOfFiles = folder.listFiles();
-		for (File f : listOfFiles) {
-			//System.out.println(f);
-		}
 		int length = listOfFiles.length;
 		int[][] matrix = new int[length][length];
 		for (int i = 0; i<length; i++) {
@@ -103,10 +100,6 @@ class Solution {
 			System.out.print("\t" + listOfFiles[i].getName());
 		}
 		System.out.println("\t" + listOfFiles[length-1].getName());
-		for (int i = 0; i < length; i++) {
-			System.out.print(listOfFiles[i].getName() + "\t");
-
-		}
 		for (int i = 0; i<length;i++) {
 			for(int j = 0;j<length;j++) {
 				System.out.print(matrix[i][j]+"\t");
