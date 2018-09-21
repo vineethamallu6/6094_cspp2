@@ -100,11 +100,11 @@ class Solution {
 		}
 		System.out.print("      \t");
 		for (int i =0; i<listOfFiles.length; i++) {
-			System.out.println("\t" + listOfFiles[i].getName());
+			System.out.print("\t" + listOfFiles[i].getName());
 		}
 		System.out.println("\t" + listOfFiles[length-1].getName());
 		for (int i = 0; i < length; i++) {
-			System.out.println(listOfFiles[i].getName() + "\t");
+			System.out.print(listOfFiles[i].getName() + "\t");
 
 		}
 		for (int i = 0; i<length;i++) {
