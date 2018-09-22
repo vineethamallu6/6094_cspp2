@@ -26,14 +26,22 @@ class Task {
 		this.pendingOrNot = pending;
 	}
 	public String getTitle() {
+		if(this.taskTitle == "") {
+			return "Title not privided";
+		} else {
 		return this.taskTitle;
 	}
+}
 	public String getPersonName() {
 		return this.nameOfPerson;
 	}
 	public int getTime() {
+		if (timeMin < 0) {
+			return this.timeMin ;
+		} else {
 		return this.timeMin;
 	}
+}
 	public String getImpOrNot() {
 		if (this.impOrNot.equals("y")) {
 			return "Important";
@@ -54,6 +62,7 @@ class Task {
 		 }
 	}
 	public String getPendingorNot() {
+		if (this.pendingOrNot.equals("todo") || this.pendingOrNot.equals("done")) {
 		if(this.pendingOrNot.equals("todo")) {
 			return "todo";
 		}
@@ -61,8 +70,12 @@ class Task {
 			return "done";
 		}
 	}
+	else {
+		return "Invalid status" + this.pendingOrNot;
+		}
+	}
 	public String toString() {
-		return this.taskTitle + ", " + this.nameOfPerson + ", " + this.timeMin + ", " + getImpOrNot() + ", " +getUrgentOrNot() + ", " + getPendingorNot();
+		return getTitle() + ", " + getPersonName() + ", " +getTime() + ", " + getImpOrNot() + ", " +getUrgentOrNot() + ", " + getPendingorNot();
 	}
 }
 class Todoist {
