@@ -36,10 +36,10 @@ class Task {
 	}
 	public String getImpOrNot() {
 		if (this.impOrNot.equals("y")) {
-			return "important";
+			return "Important";
 		}
 			else {
-				return "not Important";
+				return "Not Important";
 
 			}
 		}
@@ -47,10 +47,10 @@ class Task {
 
 	public String getUrgentOrNot() {
 		 if (this.urgentOrNot.equals("y")){
-		 	return "urgent";
+		 	return "Urgent";
 		 }
 		 else {
-		 	return "not urgent";
+		 	return "Not urgent";
 		 }
 	}
 	public String getPendingorNot() {
