@@ -15,7 +15,7 @@ public class List<E> {
     //Constructor
     public List() {
         // Create a variable of the type Object[]
-        list = ((E[])new Object[10]);//Object is the base class for all the classes
+        list = ((E[])new Object[100]);//Object is the base class for all the classes
         size = 0;
     }
     //Overloaded Constructor
