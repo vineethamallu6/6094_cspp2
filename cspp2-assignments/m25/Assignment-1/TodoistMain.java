@@ -92,6 +92,10 @@ class Todoist {
 			System.out.println(taskList.get(i).toString());
 		}
 	}
+	public void testAddTask(Task t) {
+		taskList.add(t);
+	}
+
 
 
 }
@@ -114,9 +118,9 @@ public class TodoistMain {
                 todo.addATask(t);
                 todo.testTask();
                 break;
-                // case "add-task":
-                //     testAddTask(todo, tokens);
-                // break;
+                case "add-task":
+                todo.testAddTask(new Task(tokens[1], tokens[2], Integer.parseInt(tokens[3]), tokens[4], tokens[5], tokens[6]));
+                break;
                 // case "print-todoist":
                 //     System.out.println(todo);
                 // break;
