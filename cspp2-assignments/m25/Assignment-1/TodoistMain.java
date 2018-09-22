@@ -100,6 +100,18 @@ class Todoist {
 			System.out.println(taskList.get(i).toString());
 		}
 	}
+	public void getNextTask(String name) {
+		for (int i =0; i<taskList.size();i++) {
+			if (name.equals(taskList.get(i).getPersonName())) {
+				if (taskList.get(i).getImpOrNot().equals("y") &&
+					(taskList.get(i).getPendingorNot().equals("n"))) {
+					System.out.println("hi");
+					System.out.println(taskList.get(i).toString());
+				}
+			}
+
+		}
+	}
 
 
 
@@ -128,10 +140,10 @@ public class TodoistMain {
                 break;
                 case "print-todoist":
                 todo.printAll();
-                // break;
-                // case "get-next":
-                //     System.out.println(todo.getNextTask(tokens[1]));
-                // break;
+                break;
+                case "get-next":
+                todo.getNextTask(tokens[1]);
+                break;
                 // case "get-next-n":
                 //     int n = Integer.parseInt(tokens[2]);
                 //     Task[] tasks = todo.getNextTask(tokens[1], n);
