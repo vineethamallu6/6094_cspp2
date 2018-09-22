@@ -50,7 +50,7 @@ class Task {
 		 	return "Urgent";
 		 }
 		 else {
-		 	return "Not urgent";
+		 	return "Not Urgent";
 		 }
 	}
 	public String getPendingorNot() {
