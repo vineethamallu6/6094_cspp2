@@ -103,18 +103,30 @@ class Todoist {
 	public void getNextTask(String name) {
 		for (int i =0; i<taskList.size();i++) {
 			if (name.equals(taskList.get(i).getPersonName())) {
-				if (taskList.get(i).getImpOrNot().equals("y") &&
-					(taskList.get(i).getPendingorNot().equals("n"))) {
-					System.out.println("hi");
-					System.out.println(taskList.get(i).toString());
+				if (taskList.get(i).getPendingorNot().equals("todo")) {
+					if (taskList.get(i).getImpOrNot().equals("Important") &&
+						(taskList.get(i).getUrgentOrNot().equals("Not Urgent"))) {
+						System.out.println(taskList.get(i).toString());
+				     }
+				     //else {
+				     // 	System.out.println("null");
+				     // }
+				 }
 				}
 			}
-
-		}
-	}
-
-
-
+			// for (int i =0; i<taskList.size();i++) {
+			// 	if (name.equals(taskList.get(i).getPersonName())) {
+			// 		if (taskList.get(i).getPendingorNot().equals("todo")) {
+			// 			if (taskList.get(i).getImpOrNot().equals("Important") &&
+			// 				(taskList.get(i).getUrgentOrNot().equals("Urgent"))) {
+			// 				System.out.println(taskList.get(i).toString());
+			// 	     } else {
+			// 	     	System.out.println("null");
+			// 	     }
+			// 	 }
+			// 	 }
+			// 	}
+			}
 }
 public class TodoistMain {
 
