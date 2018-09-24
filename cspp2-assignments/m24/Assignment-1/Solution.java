@@ -90,7 +90,7 @@ class Frequency {
             sum2 += Math.pow(mapTwo.get(element2), 2);
         }
         double denominator = Math.sqrt(sum1) * Math.sqrt(sum2);
-        return (int)((((numerator / denominator)
+        return (int) ((((numerator / denominator)
         * hundred) / hundred) * hundreds);
     }
 }
@@ -101,8 +101,8 @@ public class Solution {
     /**
      * Constructs the object.
      */
-    Solution() {
-
+    private Solution() {
+        //constructor.
     }
     /**
      * main function.
