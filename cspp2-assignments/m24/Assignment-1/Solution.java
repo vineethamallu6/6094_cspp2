@@ -10,7 +10,7 @@ class Frequency {
     /**
      * Constructs the object.
      */
-    public Frequency() {
+    Frequency() {
     }
     /**
      * Returns a string representation of the object.
