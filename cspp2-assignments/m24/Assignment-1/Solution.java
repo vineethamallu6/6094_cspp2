@@ -99,6 +99,12 @@ class Frequency {
  */
 public class Solution {
     /**
+     * Constructs the object.
+     */
+    Solution() {
+
+    }
+    /**
      * main function.
      *
      * @param      args  The arguments
