@@ -116,7 +116,7 @@ class Solution {
 
 
 	}catch(NoSuchElementException e) {
-		System.out.println("Empty Directory");
+		System.out.println("empty directory");
 	}
 
 		// String stext1 = sc.nextLine().toLowerCase();
