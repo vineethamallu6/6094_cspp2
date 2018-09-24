@@ -3,7 +3,6 @@ import java.util.*;
 //import java.util.HashMap;
 //import java.util.Map;
 import java.io.*;
-
 /**
  * Class for frequency.
  */
@@ -98,7 +97,7 @@ class Frequency {
 /**
  * Class for solution.
  */
-class Solution {
+public class Solution {
     /**
      * main function.
      *
