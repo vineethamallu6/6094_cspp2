@@ -1,11 +1,22 @@
 import java.util.*;
 import java.io.*;
 
-
+/**
+ * Class for frequency.
+ */
 class Frequency {
-
+    /**
+	 * Constructs the object.
+	 */
 	Frequency() {
 	}
+	/**
+	 * Returns a string representation of the object.
+	 *
+	 * @param      filename  The filename
+	 *
+	 * @return     String representation of the object.
+	 */
 	public static String toString(File filename) {
 		String s = "";
 		try {
@@ -22,6 +33,13 @@ class Frequency {
 		}
 		return s;
 	}
+	/**
+	 * Removes all.
+	 *
+	 * @param      text  The text
+	 *
+	 * @return     return map.
+	 */
 	public static Map removeAll(String text) {
 		String[] wordList = text.replaceAll("[^a-zA-Z. ]", "").toLowerCase().split(" ");
 
@@ -38,11 +56,16 @@ class Frequency {
 		}
 		//System.out.println(map);
 		return map;
-
-
 	}
+	/**
+	 * returns how much similarity is between two strings.
+	 *
+	 * @param      doc1  The document 1
+	 * @param      doc2  The document 2
+	 *
+	 * @return     similarity in integer.
+	 */
 	public static int similarity(String doc1, String doc2) {
-		//System.out.println("hello");
 		double numerator = 0;
 		double sum1 = 0;
 		double sum2 = 0;
@@ -63,13 +86,24 @@ class Frequency {
 		}
 		double denominator = Math.sqrt(sum1) * Math.sqrt(sum2);
 		return (int)((((numerator / denominator) * 100D) / 100D) * 100);
-
-
 	}
 }
-
+/**
+ * Class for solution.
+ */
 class Solution {
-	public static void main(String[] args) {
+	/**
+	 * Constructs the object.
+	 */
+	public Solution() {
+
+	}
+	/**
+	 * main function.
+	 *
+	 * @param      args  The arguments
+	 */
+	public static void main(final String[] args) {
 		try {
 		Frequency f = new Frequency();
 		Scanner sc = new Scanner(System.in);
