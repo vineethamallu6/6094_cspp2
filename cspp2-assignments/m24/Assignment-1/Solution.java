@@ -79,8 +79,8 @@ class Frequency {
         for (String element1 : mapOne.keySet()) {
             for (String element2 : mapTwo.keySet()) {
                 if (element1.equals(element2)) {
-                    numerator += mapOne.get(element1) *
-                    mapTwo.get(element2);
+                    numerator += mapOne.get(element1)
+                    * mapTwo.get(element2);
                 }
             }
         }
@@ -91,8 +91,8 @@ class Frequency {
             sum2 += Math.pow(mapTwo.get(element2), 2);
         }
         double denominator = Math.sqrt(sum1) * Math.sqrt(sum2);
-        return(int)((((numerator / denominator) *
-            hundred) / hundred) * hundreds);
+        return (int)((((numerator / denominator)
+        * hundred) / hundred) * hundreds);
     }
 }
 /**
@@ -125,8 +125,8 @@ class Solution {
                     Frequency.toString(listoffiles[j]));
                 if (maximum < result[i][j]) {
                     maximum = result[i][j];
-                    result1 = "Maximum similarity is in between " +
-                    listoffiles[i].getName() + " and " +
+                    result1 = "Maximum similarity is in between "
+                    + listoffiles[i].getName() + " and " +
                     listoffiles[j].getName();
 
                 }
