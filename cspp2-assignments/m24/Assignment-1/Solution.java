@@ -8,7 +8,7 @@ class Frequency {
     /**
 	 * Constructs the object.
 	 */
-	Frequency() {
+	public Frequency() {
 	}
 	/**
 	 * Returns a string representation of the object.
@@ -69,6 +69,8 @@ class Frequency {
 		double numerator = 0;
 		double sum1 = 0;
 		double sum2 = 0;
+		final double hundred = 100;
+		final int hundreds = 100;
 		Map<String, Integer> mapOne = removeAll(doc1);
 		Map<String, Integer> mapTwo = removeAll(doc2);
 		for (String element1 : mapOne.keySet()) {
@@ -85,7 +87,7 @@ class Frequency {
 			sum2 += Math.pow(mapTwo.get(element2), 2);
 		}
 		double denominator = Math.sqrt(sum1) * Math.sqrt(sum2);
-		return (int)((((numerator / denominator) * 100D) / 100D) * 100);
+		return (int)((((numerator / denominator) * hundred) / hundred) * hundreds);
 	}
 }
 /**
@@ -110,13 +112,14 @@ class Solution {
 		File input = new File(sc.next());
 		File[] listoffiles = input.listFiles();
 		int maximum = 0;
+		final int hundreds = 100;
 		String result1 = "";
 		int length = listoffiles.length;
 		int[][] result = new int[length][length];
 		for (int i = 0; i < length; i++) {
 			for (int j = 0; j < length; j++) {
 				if (i == j) {
-					result[i][j] = 100;
+					result[i][j] = hundreds;
 				} else {
 				result[i][j] = Frequency.similarity(Frequency.toString(listoffiles[i]),Frequency.toString(listoffiles[j]));
 				if (maximum < result[i][j]) {
