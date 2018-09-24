@@ -44,8 +44,8 @@ class Frequency {
      * @return     return map.
      */
     public static Map removeAll(final String text) {
-        String[] wordList = text.replaceAll
-        ("[^a-zA-Z. ]", "").toLowerCase().split(" ");
+        String[] wordList = text.replaceAll(
+            "[^a-zA-Z. ]", "").toLowerCase().split(" ");
         //System.out.println(Arrays.toString(wordList1));
         //return Arrays.toString(wordList1);
         Map<String, Integer> map = new HashMap<>();
