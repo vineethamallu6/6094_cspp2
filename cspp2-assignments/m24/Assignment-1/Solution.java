@@ -1,8 +1,10 @@
-import java.util.*;
-//import java.util.Scanner;
-//import java.util.HashMap;
-//import java.util.Map;
-import java.io.*;
+//import java.util.*;
+import java.util.Scanner;
+import java.util.HashMap;
+import java.util.Map;
+import java.io.FileReader;
+import java.io.File;
+//import java.io.IOException;
 /**
  * Class for frequency.
  */
@@ -10,7 +12,7 @@ class Frequency {
     /**
      * Constructs the object.
      */
-    Frequency() {
+    protected Frequency() {
     }
     /**
      * Returns a string representation of the object.
@@ -30,7 +32,7 @@ class Frequency {
             }
             input.close();
             s = sb.toString();
-        } catch (FileNotFoundException e) {
+        } catch (Exception e) {
             System.out.println("no file");
         }
         return s;
@@ -151,7 +153,7 @@ public final class Solution {
             System.out.println();
         }
         System.out.println(result1);
-    } catch (NoSuchElementException e) {
+    } catch (Exception e) {
         System.out.println("empty directory");
     }
 }
