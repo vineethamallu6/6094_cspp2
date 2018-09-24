@@ -41,37 +41,38 @@ class Frequency {
 
 
 	}
-	public static double similarString(String s1, String s2) {
-		int rows = s1.length();
-		int columns = s2.length();
-		double stringLength = rows + columns;
-		int[][] maximum = new int[rows+1][columns+1];
-		int result = 0;
-		double similarity = 0;
-		for (int i = 0; i <= rows; i++) {
-			for (int j = 0; j <= columns; j++) {
-				if (i == 0 || j == 0) {
-					maximum[i][j] = 0;
-				} else if (s1.charAt(i-1) == s2.charAt(j-1)) {
-					maximum[i][j] = maximum[i-1][j-1]+1;
-					//result = max(result, maximum[i][j]);
-				} else {
-					maximum[i][j] = 0;
-				}
-				if (result < maximum[i][j]) {
-					result = maximum[i][j];
+	public static int similarity(String doc1, String doc2) {
+		//System.out.println("hello");
+		double numerator = 0;
+		double sum1 = 0;
+		double sum2 = 0;
+		Map<String, Integer> mapOne = removeAll(doc1);
+		Map<String, Integer> mapTwo = removeAll(doc2);
+		for (String element1:mapOne.keySet()) {
+			for (String element2:mapTwo.keySet()) {
+				if (element1.equals(element2)){
+					numerator += mapOne.get(element1)*mapTwo.get(element2);
 				}
 			}
 		}
-		//System.out.println(result);
-		similarity = Math.round(((result*2)/stringLength)*100D)/100D;
-		//System.out.println(stringLength);
-		return (similarity*100);
+		for (String element1:mapOne.keySet()) {
+			sum1 += Math.pow(mapOne.get(element1), 2);
 		}
+		for (String element2:mapTwo.keySet()) {
+			sum2 += Math.pow(mapTwo.get(element2), 2);
+		}
+		double denominator = Math.sqrt(sum1) * Math.sqrt(sum2);
+		// System.out.println(sum1);
+		// System.out.println(sum2);
+		// System.out.println(numerator);
+		// System.out.println(denominator);
+		return (int)((((numerator / denominator) * 100D) / 100D) * 100);
+
+
+	}
 }
 
 class Solution {
-
 	public static void main(String[] args) {
 		try {
 		Frequency f = new Frequency();
@@ -82,16 +83,16 @@ class Solution {
 		// for (File name:listoffiles) {
 		// 	System.out.println(name);
 		// }
-		double maximum = 0;
+		int maximum = 0;
 		String result1 = "";
 		int length = listoffiles.length;
-		double[][] result = new double[length][length];
+		int[][] result = new int[length][length];
 		for (int i = 0; i < length; i++) {
 			for (int j = 0; j < length; j++) {
 				if (i == j) {
 					result[i][j] = 100;
 				} else {
-				result[i][j] = Frequency.similarString(Frequency.toString(listoffiles[i]),Frequency.toString(listoffiles[j]));
+				result[i][j] = Frequency.similarity(Frequency.toString(listoffiles[i]),Frequency.toString(listoffiles[j]));
 				if (maximum < result[i][j]) {
 					maximum = result[i][j];
 					result1 = "Maximum similarity is in between " + listoffiles[i].getName() + " and " + listoffiles[j].getName();
@@ -100,7 +101,7 @@ class Solution {
 			}
 			}
 		}
-		System.out.print("\t");
+		System.out.print("      \t");
 		for (int i = 0; i < length; i++) {
 			System.out.print("\t" + listoffiles[i].getName());
 		}
